@@ -24,7 +24,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
 
   //region creators
   static Future<com_amap_api_maps_model_particle_ParticleOverlayOptions> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_particle_ParticleOverlayOptions__', );
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_particle_ParticleOverlayOptions__', );
     final object = com_amap_api_maps_model_particle_ParticleOverlayOptions()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_particle_ParticleOverlayOptions__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_particle_ParticleOverlayOptions__', {'length': length});
   
     final List<com_amap_api_maps_model_particle_ParticleOverlayOptions> typedResult = resultBatch.map((result) => com_amap_api_maps_model_particle_ParticleOverlayOptions()..refId = result).toList();
     return typedResult;
@@ -58,7 +58,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::icon', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::icon', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -81,7 +81,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getIcon', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getIcon', {"__this__": this});
   
   
     // handle native call
@@ -104,7 +104,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getMaxParticles', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getMaxParticles', {"__this__": this});
   
   
     // handle native call
@@ -127,7 +127,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setMaxParticles', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setMaxParticles', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -150,7 +150,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::isLoop', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::isLoop', {"__this__": this});
   
   
     // handle native call
@@ -173,7 +173,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setLoop', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setLoop', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -196,7 +196,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getDuration', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getDuration', {"__this__": this});
   
   
     // handle native call
@@ -219,7 +219,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setDuration', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setDuration', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -242,7 +242,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getParticleLifeTime', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getParticleLifeTime', {"__this__": this});
   
   
     // handle native call
@@ -265,7 +265,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setParticleLifeTime', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setParticleLifeTime', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -288,7 +288,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setStartParticleSize', {"var1": var1, "var2": var2, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setStartParticleSize', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -311,7 +311,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getStartParticleW', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getStartParticleW', {"__this__": this});
   
   
     // handle native call
@@ -334,7 +334,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getstartParticleH', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getstartParticleH', {"__this__": this});
   
   
     // handle native call
@@ -357,7 +357,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::zIndex', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::zIndex', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -380,7 +380,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getZIndex', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getZIndex', {"__this__": this});
   
   
     // handle native call
@@ -403,7 +403,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setVisible', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setVisible', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -426,7 +426,7 @@ class com_amap_api_maps_model_particle_ParticleOverlayOptions extends com_amap_a
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::isVisibile', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::isVisibile', {"__this__": this});
   
   
     // handle native call
@@ -466,7 +466,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::icon_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::icon_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -485,7 +485,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getIcon_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getIcon_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -504,7 +504,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getMaxParticles_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getMaxParticles_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -523,7 +523,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setMaxParticles_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setMaxParticles_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -542,7 +542,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::isLoop_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::isLoop_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -561,7 +561,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setLoop_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setLoop_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -580,7 +580,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getDuration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getDuration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -599,7 +599,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setDuration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setDuration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -618,7 +618,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getParticleLifeTime_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getParticleLifeTime_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -637,7 +637,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setParticleLifeTime_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setParticleLifeTime_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -656,7 +656,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setStartParticleSize_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setStartParticleSize_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -675,7 +675,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getStartParticleW_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getStartParticleW_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -694,7 +694,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getstartParticleH_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getstartParticleH_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -713,7 +713,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::zIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::zIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -732,7 +732,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::getZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -751,7 +751,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setVisible_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::setVisible_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -770,7 +770,7 @@ extension com_amap_api_maps_model_particle_ParticleOverlayOptions_Batch on List<
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::isVisibile_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.particle.ParticleOverlayOptions::isVisibile_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

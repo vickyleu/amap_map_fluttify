@@ -24,7 +24,7 @@ class MAHeatMapNode extends NSObject  {
 
   //region creators
   static Future<MAHeatMapNode> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAHeatMapNode', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAHeatMapNode', {'init': init});
     final object = MAHeatMapNode()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAHeatMapNode extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAHeatMapNode', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAHeatMapNode', {'length': length, 'init': init});
   
     final List<MAHeatMapNode> typedResult = resultBatch.map((result) => MAHeatMapNode()..refId = result).toList();
     return typedResult;
@@ -43,12 +43,12 @@ class MAHeatMapNode extends NSObject  {
 
   //region getters
   Future<CLLocationCoordinate2D> get_coordinate() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAHeatMapNode::get_coordinate", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAHeatMapNode::get_coordinate", {'__this__': this});
     return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
   Future<double> get_intensity() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAHeatMapNode::get_intensity", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAHeatMapNode::get_intensity", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -56,13 +56,13 @@ class MAHeatMapNode extends NSObject  {
 
   //region setters
   Future<void> set_coordinate(CLLocationCoordinate2D coordinate) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAHeatMapNode::set_coordinate', <String, dynamic>{'__this__': this, "coordinate": coordinate});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAHeatMapNode::set_coordinate', <String, dynamic>{'__this__': this, "coordinate": coordinate});
   
   
   }
   
   Future<void> set_intensity(double intensity) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAHeatMapNode::set_intensity', <String, dynamic>{'__this__': this, "intensity": intensity});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAHeatMapNode::set_intensity', <String, dynamic>{'__this__': this, "intensity": intensity});
   
   
   }
@@ -82,14 +82,14 @@ class MAHeatMapNode extends NSObject  {
 extension MAHeatMapNode_Batch on List<MAHeatMapNode> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_coordinate_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAHeatMapNode::get_coordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAHeatMapNode::get_coordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_intensity_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAHeatMapNode::get_intensity_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAHeatMapNode::get_intensity_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;

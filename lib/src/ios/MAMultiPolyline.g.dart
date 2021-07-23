@@ -24,7 +24,7 @@ class MAMultiPolyline extends MAPolyline with MAOverlay, MAAnnotation {
 
   //region creators
   static Future<MAMultiPolyline> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAMultiPolyline', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAMultiPolyline', {'init': init});
     final object = MAMultiPolyline()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAMultiPolyline extends MAPolyline with MAOverlay, MAAnnotation {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAMultiPolyline', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAMultiPolyline', {'length': length, 'init': init});
   
     final List<MAMultiPolyline> typedResult = resultBatch.map((result) => MAMultiPolyline()..refId = result).toList();
     return typedResult;
@@ -43,7 +43,7 @@ class MAMultiPolyline extends MAPolyline with MAOverlay, MAAnnotation {
 
   //region getters
   Future<List<num>> get_drawStyleIndexes() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPolyline::get_drawStyleIndexes", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPolyline::get_drawStyleIndexes", {'__this__': this});
     return __result__ == null ? null : ((__result__ as List).cast<num>());
   }
   
@@ -51,7 +51,7 @@ class MAMultiPolyline extends MAPolyline with MAOverlay, MAAnnotation {
 
   //region setters
   Future<void> set_drawStyleIndexes(List<num> drawStyleIndexes) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiPolyline::set_drawStyleIndexes', <String, dynamic>{'__this__': this, "drawStyleIndexes": drawStyleIndexes});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiPolyline::set_drawStyleIndexes', <String, dynamic>{'__this__': this, "drawStyleIndexes": drawStyleIndexes});
   
   
   }
@@ -71,7 +71,7 @@ class MAMultiPolyline extends MAPolyline with MAOverlay, MAAnnotation {
 extension MAMultiPolyline_Batch on List<MAMultiPolyline> {
   //region getters
   Future<List<List<num>>> get_drawStyleIndexes_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPolyline::get_drawStyleIndexes_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPolyline::get_drawStyleIndexes_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<List<num>>().map((__result__) => (__result__ as List).cast<num>()).toList();
     return typedResult;

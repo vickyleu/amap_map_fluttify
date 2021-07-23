@@ -24,7 +24,7 @@ class MAParticleOverlayOptions extends NSObject  {
 
   //region creators
   static Future<MAParticleOverlayOptions> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleOverlayOptions', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleOverlayOptions', {'init': init});
     final object = MAParticleOverlayOptions()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAParticleOverlayOptions extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleOverlayOptions', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleOverlayOptions', {'length': length, 'init': init});
   
     final List<MAParticleOverlayOptions> typedResult = resultBatch.map((result) => MAParticleOverlayOptions()..refId = result).toList();
     return typedResult;
@@ -43,62 +43,62 @@ class MAParticleOverlayOptions extends NSObject  {
 
   //region getters
   Future<bool> get_visibile() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_visibile", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_visibile", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_duration() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_duration", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_duration", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_loop() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_loop", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_loop", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_maxParticles() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_maxParticles", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_maxParticles", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<UIImage> get_icon() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_icon", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_icon", {'__this__': this});
     return __result__ == null ? null : (UIImage()..refId = __result__);
   }
   
   Future<CGSize> get_startParticleSize() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_startParticleSize", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_startParticleSize", {'__this__': this});
     return __result__ == null ? null : (CGSize()..refId = __result__);
   }
   
   Future<double> get_particleLifeTime() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleLifeTime", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleLifeTime", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<MAParticleColorGenerate> get_particleStartColor() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleStartColor", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleStartColor", {'__this__': this});
     return __result__ == null ? null : (MAParticleColorGenerate.subInstance()..refId = __result__);
   }
   
   Future<MAParticleVelocityGenerate> get_particleStartSpeed() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleStartSpeed", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleStartSpeed", {'__this__': this});
     return __result__ == null ? null : (MAParticleVelocityGenerate.subInstance()..refId = __result__);
   }
   
   Future<MAParticleEmissionModule> get_particleEmissionModule() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleEmissionModule", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleEmissionModule", {'__this__': this});
     return __result__ == null ? null : (MAParticleEmissionModule()..refId = __result__);
   }
   
   Future<MAParticleShapeModule> get_particleShapeModule() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleShapeModule", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleShapeModule", {'__this__': this});
     return __result__ == null ? null : (MAParticleShapeModule.subInstance()..refId = __result__);
   }
   
   Future<MAParticleOverLifeModule> get_particleOverLifeModule() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleOverLifeModule", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleOverLifeModule", {'__this__': this});
     return __result__ == null ? null : (MAParticleOverLifeModule()..refId = __result__);
   }
   
@@ -106,73 +106,73 @@ class MAParticleOverlayOptions extends NSObject  {
 
   //region setters
   Future<void> set_visibile(bool visibile) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_visibile', <String, dynamic>{'__this__': this, "visibile": visibile});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_visibile', <String, dynamic>{'__this__': this, "visibile": visibile});
   
   
   }
   
   Future<void> set_duration(double duration) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
   
   
   }
   
   Future<void> set_loop(bool loop) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_loop', <String, dynamic>{'__this__': this, "loop": loop});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_loop', <String, dynamic>{'__this__': this, "loop": loop});
   
   
   }
   
   Future<void> set_maxParticles(int maxParticles) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_maxParticles', <String, dynamic>{'__this__': this, "maxParticles": maxParticles});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_maxParticles', <String, dynamic>{'__this__': this, "maxParticles": maxParticles});
   
   
   }
   
   Future<void> set_icon(UIImage icon) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_icon', <String, dynamic>{'__this__': this, "icon": icon});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_icon', <String, dynamic>{'__this__': this, "icon": icon});
   
   
   }
   
   Future<void> set_startParticleSize(CGSize startParticleSize) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_startParticleSize', <String, dynamic>{'__this__': this, "startParticleSize": startParticleSize});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_startParticleSize', <String, dynamic>{'__this__': this, "startParticleSize": startParticleSize});
   
   
   }
   
   Future<void> set_particleLifeTime(double particleLifeTime) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleLifeTime', <String, dynamic>{'__this__': this, "particleLifeTime": particleLifeTime});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleLifeTime', <String, dynamic>{'__this__': this, "particleLifeTime": particleLifeTime});
   
   
   }
   
   Future<void> set_particleStartColor(MAParticleColorGenerate particleStartColor) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleStartColor', <String, dynamic>{'__this__': this, "particleStartColor": particleStartColor});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleStartColor', <String, dynamic>{'__this__': this, "particleStartColor": particleStartColor});
   
   
   }
   
   Future<void> set_particleStartSpeed(MAParticleVelocityGenerate particleStartSpeed) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleStartSpeed', <String, dynamic>{'__this__': this, "particleStartSpeed": particleStartSpeed});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleStartSpeed', <String, dynamic>{'__this__': this, "particleStartSpeed": particleStartSpeed});
   
   
   }
   
   Future<void> set_particleEmissionModule(MAParticleEmissionModule particleEmissionModule) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleEmissionModule', <String, dynamic>{'__this__': this, "particleEmissionModule": particleEmissionModule});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleEmissionModule', <String, dynamic>{'__this__': this, "particleEmissionModule": particleEmissionModule});
   
   
   }
   
   Future<void> set_particleShapeModule(MAParticleShapeModule particleShapeModule) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleShapeModule', <String, dynamic>{'__this__': this, "particleShapeModule": particleShapeModule});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleShapeModule', <String, dynamic>{'__this__': this, "particleShapeModule": particleShapeModule});
   
   
   }
   
   Future<void> set_particleOverLifeModule(MAParticleOverLifeModule particleOverLifeModule) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleOverLifeModule', <String, dynamic>{'__this__': this, "particleOverLifeModule": particleOverLifeModule});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptions::set_particleOverLifeModule', <String, dynamic>{'__this__': this, "particleOverLifeModule": particleOverLifeModule});
   
   
   }
@@ -192,84 +192,84 @@ class MAParticleOverlayOptions extends NSObject  {
 extension MAParticleOverlayOptions_Batch on List<MAParticleOverlayOptions> {
   //region getters
   Future<List<bool>> get_visibile_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_visibile_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_visibile_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_duration_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_loop_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_loop_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_loop_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_maxParticles_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_maxParticles_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_maxParticles_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<UIImage>> get_icon_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_icon_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_icon_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => UIImage()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGSize>> get_startParticleSize_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_startParticleSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_startParticleSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGSize()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_particleLifeTime_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleLifeTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleLifeTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<MAParticleColorGenerate>> get_particleStartColor_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleStartColor_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleStartColor_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAParticleColorGenerate.subInstance()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MAParticleVelocityGenerate>> get_particleStartSpeed_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleStartSpeed_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleStartSpeed_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAParticleVelocityGenerate.subInstance()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MAParticleEmissionModule>> get_particleEmissionModule_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleEmissionModule_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleEmissionModule_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAParticleEmissionModule()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MAParticleShapeModule>> get_particleShapeModule_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleShapeModule_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleShapeModule_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAParticleShapeModule.subInstance()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MAParticleOverLifeModule>> get_particleOverLifeModule_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleOverLifeModule_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayOptions::get_particleOverLifeModule_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAParticleOverLifeModule()..refId = __result__).toList();
     return typedResult;

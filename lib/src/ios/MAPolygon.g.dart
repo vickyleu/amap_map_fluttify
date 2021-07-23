@@ -24,7 +24,7 @@ class MAPolygon extends MAMultiPoint with MAOverlay, MAAnnotation {
 
   //region creators
   static Future<MAPolygon> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAPolygon', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAPolygon', {'init': init});
     final object = MAPolygon()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAPolygon extends MAMultiPoint with MAOverlay, MAAnnotation {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAPolygon', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAPolygon', {'length': length, 'init': init});
   
     final List<MAPolygon> typedResult = resultBatch.map((result) => MAPolygon()..refId = result).toList();
     return typedResult;
@@ -58,7 +58,7 @@ class MAPolygon extends MAMultiPoint with MAOverlay, MAAnnotation {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygon::polygonWithCoordinates_count', {"coords": coords, "count": count});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAPolygon::polygonWithCoordinates_count', {"coords": coords, "count": count});
   
   
     // handle native call
@@ -81,7 +81,7 @@ class MAPolygon extends MAMultiPoint with MAOverlay, MAAnnotation {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygon::polygonWithPoints_count', {"points": points, "count": count});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAPolygon::polygonWithPoints_count', {"points": points, "count": count});
   
   
     // handle native call
@@ -104,7 +104,7 @@ class MAPolygon extends MAMultiPoint with MAOverlay, MAAnnotation {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygon::setPolygonWithPoints_count', {"points": points, "count": count, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAPolygon::setPolygonWithPoints_count', {"points": points, "count": count, "__this__": this});
   
   
     // handle native call
@@ -127,7 +127,7 @@ class MAPolygon extends MAMultiPoint with MAOverlay, MAAnnotation {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygon::setPolygonWithCoordinates_count', {"coords": coords, "count": count, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAPolygon::setPolygonWithCoordinates_count', {"coords": coords, "count": count, "__this__": this});
   
   
     // handle native call
@@ -167,7 +167,7 @@ extension MAPolygon_Batch on List<MAPolygon> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygon::polygonWithCoordinates_count_batch', [for (int __i__ = 0; __i__ < coords.length; __i__++) {"coords": coords[__i__], "count": count[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAPolygon::polygonWithCoordinates_count_batch', [for (int __i__ = 0; __i__ < coords.length; __i__++) {"coords": coords[__i__], "count": count[__i__]}]);
   
   
     // convert native result to dart side object
@@ -186,7 +186,7 @@ extension MAPolygon_Batch on List<MAPolygon> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygon::polygonWithPoints_count_batch', [for (int __i__ = 0; __i__ < points.length; __i__++) {"points": points[__i__], "count": count[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAPolygon::polygonWithPoints_count_batch', [for (int __i__ = 0; __i__ < points.length; __i__++) {"points": points[__i__], "count": count[__i__]}]);
   
   
     // convert native result to dart side object
@@ -205,7 +205,7 @@ extension MAPolygon_Batch on List<MAPolygon> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygon::setPolygonWithPoints_count_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"points": points[__i__], "count": count[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAPolygon::setPolygonWithPoints_count_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"points": points[__i__], "count": count[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -224,7 +224,7 @@ extension MAPolygon_Batch on List<MAPolygon> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAPolygon::setPolygonWithCoordinates_count_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"coords": coords[__i__], "count": count[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAPolygon::setPolygonWithCoordinates_count_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"coords": coords[__i__], "count": count[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

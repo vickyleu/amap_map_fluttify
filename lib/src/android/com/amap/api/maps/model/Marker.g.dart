@@ -43,7 +43,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPeriod', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPeriod', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -66,7 +66,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getPeriod', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getPeriod', {"__this__": this});
   
   
     // handle native call
@@ -89,7 +89,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setIcons', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setIcons', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -112,7 +112,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getIcons', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getIcons', {"__this__": this});
   
   
     // handle native call
@@ -135,7 +135,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPerspective', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPerspective', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -158,7 +158,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isPerspective', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isPerspective', {"__this__": this});
   
   
     // handle native call
@@ -181,7 +181,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setIcon', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setIcon', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -204,7 +204,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAnchor', {"var1": var1, "var2": var2, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAnchor', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -227,7 +227,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setDraggable', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setDraggable', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -250,7 +250,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isDraggable', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isDraggable', {"__this__": this});
   
   
     // handle native call
@@ -273,7 +273,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::hideInfoWindow', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::hideInfoWindow', {"__this__": this});
   
   
     // handle native call
@@ -296,7 +296,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowShown', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowShown', {"__this__": this});
   
   
     // handle native call
@@ -319,7 +319,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setToTop', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setToTop', {"__this__": this});
   
   
     // handle native call
@@ -342,7 +342,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setFlat', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setFlat', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -365,7 +365,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isFlat', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isFlat', {"__this__": this});
   
   
     // handle native call
@@ -388,7 +388,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPositionByPixels', {"var1": var1, "var2": var2, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPositionByPixels', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -411,7 +411,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setZIndex', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setZIndex', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -434,7 +434,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getZIndex', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getZIndex', {"__this__": this});
   
   
     // handle native call
@@ -457,11 +457,11 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAnimationListener', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAnimationListener', {"__this__": this});
   
   
     // handle native call
-    MethodChannel('com.amap.api.maps.model.Marker::setAnimationListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('com.amap.api.maps.model.Marker::setAnimationListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -510,7 +510,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAlpha', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAlpha', {"__this__": this});
   
   
     // handle native call
@@ -533,7 +533,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAlpha', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAlpha', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -556,7 +556,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getDisplayLevel', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getDisplayLevel', {"__this__": this});
   
   
     // handle native call
@@ -579,7 +579,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getOptions', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getOptions', {"__this__": this});
   
   
     // handle native call
@@ -602,7 +602,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isClickable', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isClickable', {"__this__": this});
   
   
     // handle native call
@@ -625,7 +625,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowAutoOverturn', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowAutoOverturn', {"__this__": this});
   
   
     // handle native call
@@ -648,7 +648,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowEnable', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowEnable', {"__this__": this});
   
   
     // handle native call
@@ -671,7 +671,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setInfoWindowEnable', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setInfoWindowEnable', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -694,7 +694,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setMarkerOptions', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setMarkerOptions', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -717,7 +717,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAutoOverturnInfoWindow', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAutoOverturnInfoWindow', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -740,7 +740,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setClickable', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setClickable', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -763,7 +763,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setDisplayLevel', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setDisplayLevel', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -786,7 +786,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setFixingPointEnable', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setFixingPointEnable', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -809,7 +809,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isRemoved', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isRemoved', {"__this__": this});
   
   
     // handle native call
@@ -832,7 +832,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPositionNotUpdate', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPositionNotUpdate', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -855,7 +855,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setRotateAngleNotUpdate', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setRotateAngleNotUpdate', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -878,7 +878,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setBelowMaskLayer', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setBelowMaskLayer', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -901,7 +901,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAnchorU', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAnchorU', {"__this__": this});
   
   
     // handle native call
@@ -924,7 +924,7 @@ class com_amap_api_maps_model_Marker extends com_amap_api_maps_model_BasePointOv
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAnchorV', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAnchorV', {"__this__": this});
   
   
     // handle native call
@@ -964,7 +964,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPeriod_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPeriod_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -983,7 +983,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getPeriod_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getPeriod_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1002,7 +1002,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setIcons_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setIcons_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1021,7 +1021,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getIcons_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getIcons_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1040,7 +1040,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPerspective_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPerspective_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1059,7 +1059,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isPerspective_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isPerspective_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1078,7 +1078,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setIcon_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setIcon_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1097,7 +1097,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAnchor_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAnchor_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1116,7 +1116,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setDraggable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setDraggable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1135,7 +1135,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isDraggable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isDraggable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1154,7 +1154,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::hideInfoWindow_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::hideInfoWindow_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1173,7 +1173,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowShown_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowShown_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1192,7 +1192,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setToTop_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setToTop_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1211,7 +1211,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setFlat_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setFlat_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1230,7 +1230,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isFlat_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isFlat_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1249,7 +1249,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPositionByPixels_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPositionByPixels_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1268,7 +1268,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1287,7 +1287,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getZIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1306,7 +1306,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAlpha_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAlpha_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1325,7 +1325,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAlpha_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAlpha_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1344,7 +1344,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getDisplayLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getDisplayLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1363,7 +1363,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1382,7 +1382,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isClickable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isClickable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1401,7 +1401,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowAutoOverturn_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowAutoOverturn_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1420,7 +1420,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowEnable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isInfoWindowEnable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1439,7 +1439,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setInfoWindowEnable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setInfoWindowEnable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1458,7 +1458,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setMarkerOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setMarkerOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1477,7 +1477,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAutoOverturnInfoWindow_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setAutoOverturnInfoWindow_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1496,7 +1496,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setClickable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setClickable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1515,7 +1515,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setDisplayLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setDisplayLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1534,7 +1534,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setFixingPointEnable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setFixingPointEnable_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1553,7 +1553,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isRemoved_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::isRemoved_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1572,7 +1572,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPositionNotUpdate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setPositionNotUpdate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1591,7 +1591,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setRotateAngleNotUpdate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setRotateAngleNotUpdate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1610,7 +1610,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setBelowMaskLayer_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::setBelowMaskLayer_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1629,7 +1629,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAnchorU_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAnchorU_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1648,7 +1648,7 @@ extension com_amap_api_maps_model_Marker_Batch on List<com_amap_api_maps_model_M
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAnchorV_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.Marker::getAnchorV_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

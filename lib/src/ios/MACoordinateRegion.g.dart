@@ -24,7 +24,7 @@ class MACoordinateRegion extends NSObject  {
 
   //region creators
   static Future<MACoordinateRegion> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMACoordinateRegion', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMACoordinateRegion', {'init': init});
     final object = MACoordinateRegion()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MACoordinateRegion extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMACoordinateRegion', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMACoordinateRegion', {'length': length, 'init': init});
   
     final List<MACoordinateRegion> typedResult = resultBatch.map((result) => MACoordinateRegion()..refId = result).toList();
     return typedResult;
@@ -43,12 +43,12 @@ class MACoordinateRegion extends NSObject  {
 
   //region getters
   Future<CLLocationCoordinate2D> get_center() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MACoordinateRegion::get_center", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MACoordinateRegion::get_center", {'__this__': this});
     return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
   Future<MACoordinateSpan> get_span() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MACoordinateRegion::get_span", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MACoordinateRegion::get_span", {'__this__': this});
     return __result__ == null ? null : (MACoordinateSpan()..refId = __result__);
   }
   
@@ -56,13 +56,13 @@ class MACoordinateRegion extends NSObject  {
 
   //region setters
   Future<void> set_center(CLLocationCoordinate2D center) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateRegion::set_center', <String, dynamic>{'__this__': this, "center": center});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MACoordinateRegion::set_center', <String, dynamic>{'__this__': this, "center": center});
   
   
   }
   
   Future<void> set_span(MACoordinateSpan span) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateRegion::set_span', <String, dynamic>{'__this__': this, "span": span});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MACoordinateRegion::set_span', <String, dynamic>{'__this__': this, "span": span});
   
   
   }
@@ -82,14 +82,14 @@ class MACoordinateRegion extends NSObject  {
 extension MACoordinateRegion_Batch on List<MACoordinateRegion> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_center_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MACoordinateRegion::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MACoordinateRegion::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MACoordinateSpan>> get_span_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MACoordinateRegion::get_span_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MACoordinateRegion::get_span_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MACoordinateSpan()..refId = __result__).toList();
     return typedResult;

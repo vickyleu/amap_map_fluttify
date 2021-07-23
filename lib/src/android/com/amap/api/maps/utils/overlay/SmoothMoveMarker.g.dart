@@ -24,7 +24,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
 
   //region creators
   static Future<com_amap_api_maps_utils_overlay_SmoothMoveMarker> create__com_amap_api_maps_AMap(com_amap_api_maps_AMap var1) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_utils_overlay_SmoothMoveMarker__com_amap_api_maps_AMap', {"var1": var1});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_utils_overlay_SmoothMoveMarker__com_amap_api_maps_AMap', {"var1": var1});
     final object = com_amap_api_maps_utils_overlay_SmoothMoveMarker()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_utils_overlay_SmoothMoveMarker__com_amap_api_maps_AMap', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_utils_overlay_SmoothMoveMarker__com_amap_api_maps_AMap', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
     final List<com_amap_api_maps_utils_overlay_SmoothMoveMarker> typedResult = resultBatch.map((result) => com_amap_api_maps_utils_overlay_SmoothMoveMarker()..refId = result).toList();
     return typedResult;
@@ -43,7 +43,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
 
   //region getters
   static Future<double> get_static_MIN_OFFSET_DISTANCE() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.utils.overlay.SmoothMoveMarker::get_MIN_OFFSET_DISTANCE", );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.utils.overlay.SmoothMoveMarker::get_MIN_OFFSET_DISTANCE", );
     return __result__ == null ? null : (__result__);
   }
   
@@ -62,7 +62,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setPoints', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setPoints', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -85,7 +85,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setTotalDuration', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setTotalDuration', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -108,7 +108,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::startSmoothMove', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::startSmoothMove', {"__this__": this});
   
   
     // handle native call
@@ -131,7 +131,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::stopMove', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::stopMove', {"__this__": this});
   
   
     // handle native call
@@ -154,7 +154,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getMarker', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getMarker', {"__this__": this});
   
   
     // handle native call
@@ -177,7 +177,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getPosition', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getPosition', {"__this__": this});
   
   
     // handle native call
@@ -200,7 +200,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getIndex', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getIndex', {"__this__": this});
   
   
     // handle native call
@@ -223,7 +223,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::resetIndex', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::resetIndex', {"__this__": this});
   
   
     // handle native call
@@ -246,7 +246,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::destroy', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::destroy', {"__this__": this});
   
   
     // handle native call
@@ -269,7 +269,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::removeMarker', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::removeMarker', {"__this__": this});
   
   
     // handle native call
@@ -292,7 +292,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setPosition', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setPosition', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -315,7 +315,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setDescriptor', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setDescriptor', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -338,7 +338,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setRotate', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setRotate', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -361,7 +361,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setVisible', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setVisible', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -384,11 +384,11 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setMoveListener', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setMoveListener', {"__this__": this});
   
   
     // handle native call
-    MethodChannel('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setMoveListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setMoveListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -431,7 +431,7 @@ class com_amap_api_maps_utils_overlay_SmoothMoveMarker extends java_lang_Object 
 extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_amap_api_maps_utils_overlay_SmoothMoveMarker> {
   //region getters
   Future<List<double>> get_static_MIN_OFFSET_DISTANCE_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.utils.overlay.SmoothMoveMarker::get_MIN_OFFSET_DISTANCE_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.utils.overlay.SmoothMoveMarker::get_MIN_OFFSET_DISTANCE_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
@@ -451,7 +451,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setPoints_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setPoints_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -470,7 +470,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setTotalDuration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setTotalDuration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -489,7 +489,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::startSmoothMove_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::startSmoothMove_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -508,7 +508,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::stopMove_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::stopMove_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -527,7 +527,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getMarker_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getMarker_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -546,7 +546,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getPosition_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getPosition_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -565,7 +565,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::getIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -584,7 +584,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::resetIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::resetIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -603,7 +603,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::destroy_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::destroy_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -622,7 +622,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::removeMarker_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::removeMarker_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -641,7 +641,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setPosition_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setPosition_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -660,7 +660,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setDescriptor_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setDescriptor_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -679,7 +679,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setRotate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setRotate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -698,7 +698,7 @@ extension com_amap_api_maps_utils_overlay_SmoothMoveMarker_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setVisible_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.utils.overlay.SmoothMoveMarker::setVisible_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

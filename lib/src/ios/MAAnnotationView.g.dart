@@ -24,7 +24,7 @@ class MAAnnotationView extends UIView  {
 
   //region creators
   static Future<MAAnnotationView> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAAnnotationView', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAAnnotationView', {'init': init});
     final object = MAAnnotationView()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAAnnotationView extends UIView  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAAnnotationView', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAAnnotationView', {'length': length, 'init': init});
   
     final List<MAAnnotationView> typedResult = resultBatch.map((result) => MAAnnotationView()..refId = result).toList();
     return typedResult;
@@ -43,82 +43,82 @@ class MAAnnotationView extends UIView  {
 
   //region getters
   Future<String> get_reuseIdentifier({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_reuseIdentifier", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_reuseIdentifier", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_zIndex({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_zIndex", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_zIndex", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<MAAnnotation> get_annotation({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_annotation", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_annotation", {'__this__': this});
     return __result__ == null ? null : (MAAnnotation.subInstance()..refId = __result__);
   }
   
   Future<UIImage> get_image({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_image", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_image", {'__this__': this});
     return __result__ == null ? null : (UIImage()..refId = __result__);
   }
   
   Future<MACustomCalloutView> get_customCalloutView({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_customCalloutView", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_customCalloutView", {'__this__': this});
     return __result__ == null ? null : (MACustomCalloutView()..refId = __result__);
   }
   
   Future<CGPoint> get_centerOffset({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_centerOffset", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_centerOffset", {'__this__': this});
     return __result__ == null ? null : (CGPoint()..refId = __result__);
   }
   
   Future<CGPoint> get_calloutOffset({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_calloutOffset", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_calloutOffset", {'__this__': this});
     return __result__ == null ? null : (CGPoint()..refId = __result__);
   }
   
   Future<bool> get_enabled({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isEnabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_highlighted({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isHighlighted", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isHighlighted", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_selected({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isSelected", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isSelected", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_canShowCallout({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_canShowCallout", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_canShowCallout", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<UIView> get_leftCalloutAccessoryView({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_leftCalloutAccessoryView", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_leftCalloutAccessoryView", {'__this__': this});
     return __result__ == null ? null : (UIView()..refId = __result__);
   }
   
   Future<UIView> get_rightCalloutAccessoryView({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_rightCalloutAccessoryView", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_rightCalloutAccessoryView", {'__this__': this});
     return __result__ == null ? null : (UIView()..refId = __result__);
   }
   
   Future<bool> get_draggable({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isDraggable", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isDraggable", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<MAAnnotationViewDragState> get_dragState({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_dragState", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_dragState", {'__this__': this});
     return __result__ == null ? null : ((__result__ as int).toMAAnnotationViewDragState());
   }
   
   Future<bool> get_canAdjustPositon({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_canAdjustPositon", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_canAdjustPositon", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -126,91 +126,91 @@ class MAAnnotationView extends UIView  {
 
   //region setters
   Future<void> set_zIndex(int zIndex, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_zIndex', <String, dynamic>{'__this__': this, "zIndex": zIndex});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_zIndex', <String, dynamic>{'__this__': this, "zIndex": zIndex});
   
   
   }
   
   Future<void> set_annotation(MAAnnotation annotation, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_annotation', <String, dynamic>{'__this__': this, "annotation": annotation});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_annotation', <String, dynamic>{'__this__': this, "annotation": annotation});
   
   
   }
   
   Future<void> set_image(UIImage image, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_image', <String, dynamic>{'__this__': this, "image": image});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_image', <String, dynamic>{'__this__': this, "image": image});
   
   
   }
   
   Future<void> set_customCalloutView(MACustomCalloutView customCalloutView, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_customCalloutView', <String, dynamic>{'__this__': this, "customCalloutView": customCalloutView});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_customCalloutView', <String, dynamic>{'__this__': this, "customCalloutView": customCalloutView});
   
   
   }
   
   Future<void> set_centerOffset(CGPoint centerOffset, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_centerOffset', <String, dynamic>{'__this__': this, "centerOffset": centerOffset});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_centerOffset', <String, dynamic>{'__this__': this, "centerOffset": centerOffset});
   
   
   }
   
   Future<void> set_calloutOffset(CGPoint calloutOffset, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_calloutOffset', <String, dynamic>{'__this__': this, "calloutOffset": calloutOffset});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_calloutOffset', <String, dynamic>{'__this__': this, "calloutOffset": calloutOffset});
   
   
   }
   
   Future<void> set_enabled(bool enabled, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_enabled', <String, dynamic>{'__this__': this, "enabled": enabled});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_enabled', <String, dynamic>{'__this__': this, "enabled": enabled});
   
   
   }
   
   Future<void> set_highlighted(bool highlighted, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_highlighted', <String, dynamic>{'__this__': this, "highlighted": highlighted});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_highlighted', <String, dynamic>{'__this__': this, "highlighted": highlighted});
   
   
   }
   
   Future<void> set_selected(bool selected, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_selected', <String, dynamic>{'__this__': this, "selected": selected});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_selected', <String, dynamic>{'__this__': this, "selected": selected});
   
   
   }
   
   Future<void> set_canShowCallout(bool canShowCallout, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_canShowCallout', <String, dynamic>{'__this__': this, "canShowCallout": canShowCallout});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_canShowCallout', <String, dynamic>{'__this__': this, "canShowCallout": canShowCallout});
   
   
   }
   
   Future<void> set_leftCalloutAccessoryView(UIView leftCalloutAccessoryView, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_leftCalloutAccessoryView', <String, dynamic>{'__this__': this, "leftCalloutAccessoryView": leftCalloutAccessoryView});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_leftCalloutAccessoryView', <String, dynamic>{'__this__': this, "leftCalloutAccessoryView": leftCalloutAccessoryView});
   
   
   }
   
   Future<void> set_rightCalloutAccessoryView(UIView rightCalloutAccessoryView, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_rightCalloutAccessoryView', <String, dynamic>{'__this__': this, "rightCalloutAccessoryView": rightCalloutAccessoryView});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_rightCalloutAccessoryView', <String, dynamic>{'__this__': this, "rightCalloutAccessoryView": rightCalloutAccessoryView});
   
   
   }
   
   Future<void> set_draggable(bool draggable, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_draggable', <String, dynamic>{'__this__': this, "draggable": draggable});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_draggable', <String, dynamic>{'__this__': this, "draggable": draggable});
   
   
   }
   
   Future<void> set_dragState(MAAnnotationViewDragState dragState, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_dragState', <String, dynamic>{'__this__': this, "dragState": dragState.toValue()});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_dragState', <String, dynamic>{'__this__': this, "dragState": dragState.toValue()});
   
   
   }
   
   Future<void> set_canAdjustPositon(bool canAdjustPositon, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_canAdjustPositon', <String, dynamic>{'__this__': this, "canAdjustPositon": canAdjustPositon});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::set_canAdjustPositon', <String, dynamic>{'__this__': this, "canAdjustPositon": canAdjustPositon});
   
   
   }
@@ -226,7 +226,7 @@ class MAAnnotationView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::setSelected_animated', {"selected": selected, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::setSelected_animated', {"selected": selected, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -249,7 +249,7 @@ class MAAnnotationView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::initWithAnnotation_reuseIdentifier', {"annotation": annotation, "reuseIdentifier": reuseIdentifier, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::initWithAnnotation_reuseIdentifier', {"annotation": annotation, "reuseIdentifier": reuseIdentifier, "__this__": this});
   
   
     // handle native call
@@ -272,7 +272,7 @@ class MAAnnotationView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::prepareForReuse', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::prepareForReuse', {"__this__": this});
   
   
     // handle native call
@@ -295,7 +295,7 @@ class MAAnnotationView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::setDragState_animated', {"newDragState": newDragState.toValue(), "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::setDragState_animated', {"newDragState": newDragState.toValue(), "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -321,112 +321,112 @@ class MAAnnotationView extends UIView  {
 extension MAAnnotationView_Batch on List<MAAnnotationView> {
   //region getters
   Future<List<String>> get_reuseIdentifier_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_reuseIdentifier_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_reuseIdentifier_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_zIndex_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_zIndex_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_zIndex_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<MAAnnotation>> get_annotation_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_annotation_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_annotation_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAAnnotation.subInstance()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<UIImage>> get_image_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_image_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_image_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => UIImage()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MACustomCalloutView>> get_customCalloutView_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_customCalloutView_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_customCalloutView_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MACustomCalloutView()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGPoint>> get_centerOffset_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_centerOffset_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_centerOffset_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGPoint>> get_calloutOffset_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_calloutOffset_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_calloutOffset_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_enabled_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_highlighted_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isHighlighted_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isHighlighted_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_selected_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isSelected_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isSelected_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_canShowCallout_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_canShowCallout_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_canShowCallout_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<UIView>> get_leftCalloutAccessoryView_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_leftCalloutAccessoryView_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_leftCalloutAccessoryView_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => UIView()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<UIView>> get_rightCalloutAccessoryView_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_rightCalloutAccessoryView_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_rightCalloutAccessoryView_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => UIView()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_draggable_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isDraggable_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_isDraggable_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<MAAnnotationViewDragState>> get_dragState_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_dragState_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_dragState_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toMAAnnotationViewDragState()).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_canAdjustPositon_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_canAdjustPositon_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotationView::get_canAdjustPositon_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
@@ -535,7 +535,7 @@ extension MAAnnotationView_Batch on List<MAAnnotationView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::setSelected_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"selected": selected[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::setSelected_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"selected": selected[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -554,7 +554,7 @@ extension MAAnnotationView_Batch on List<MAAnnotationView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::initWithAnnotation_reuseIdentifier_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "reuseIdentifier": reuseIdentifier[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::initWithAnnotation_reuseIdentifier_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "reuseIdentifier": reuseIdentifier[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -573,7 +573,7 @@ extension MAAnnotationView_Batch on List<MAAnnotationView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::prepareForReuse_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::prepareForReuse_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -592,7 +592,7 @@ extension MAAnnotationView_Batch on List<MAAnnotationView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotationView::setDragState_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"newDragState": newDragState[__i__].toValue(), "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAAnnotationView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotationView::setDragState_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"newDragState": newDragState[__i__].toValue(), "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

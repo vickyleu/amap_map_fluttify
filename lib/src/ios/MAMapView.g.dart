@@ -24,7 +24,7 @@ class MAMapView extends UIView  {
 
   //region creators
   static Future<MAMapView> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAMapView', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAMapView', {'init': init});
     final object = MAMapView()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAMapView extends UIView  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAMapView', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAMapView', {'length': length, 'init': init});
   
     final List<MAMapView> typedResult = resultBatch.map((result) => MAMapView()..refId = result).toList();
     return typedResult;
@@ -43,292 +43,292 @@ class MAMapView extends UIView  {
 
   //region getters
   Future<MAMapType> get_mapType({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_mapType", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_mapType", {'__this__': this});
     return __result__ == null ? null : ((__result__ as int).toMAMapType());
   }
   
   Future<CLLocationCoordinate2D> get_centerCoordinate({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_centerCoordinate", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_centerCoordinate", {'__this__': this});
     return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
   Future<MACoordinateRegion> get_region({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_region", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_region", {'__this__': this});
     return __result__ == null ? null : (MACoordinateRegion()..refId = __result__);
   }
   
   Future<MAMapRect> get_visibleMapRect({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_visibleMapRect", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_visibleMapRect", {'__this__': this});
     return __result__ == null ? null : (MAMapRect()..refId = __result__);
   }
   
   Future<MACoordinateRegion> get_limitRegion({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_limitRegion", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_limitRegion", {'__this__': this});
     return __result__ == null ? null : (MACoordinateRegion()..refId = __result__);
   }
   
   Future<MAMapRect> get_limitMapRect({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_limitMapRect", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_limitMapRect", {'__this__': this});
     return __result__ == null ? null : (MAMapRect()..refId = __result__);
   }
   
   Future<double> get_zoomLevel({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_zoomLevel", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_zoomLevel", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_minZoomLevel({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_minZoomLevel", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_minZoomLevel", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_maxZoomLevel({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_maxZoomLevel", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_maxZoomLevel", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_rotationDegree({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_rotationDegree", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_rotationDegree", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_cameraDegree({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_cameraDegree", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_cameraDegree", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_zoomingInPivotsAroundAnchorPoint({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_zoomingInPivotsAroundAnchorPoint", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_zoomingInPivotsAroundAnchorPoint", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_zoomEnabled({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isZoomEnabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isZoomEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_scrollEnabled({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isScrollEnabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isScrollEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_rotateEnabled({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isRotateEnabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isRotateEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_rotateCameraEnabled({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isRotateCameraEnabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isRotateCameraEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_skyModelEnable({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isSkyModelEnabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isSkyModelEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_showsBuildings({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsBuildings", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsBuildings", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_showsLabels({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsLabels", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsLabels", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_showTraffic({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowTraffic", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowTraffic", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_trafficRatio({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_trafficRatio", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_trafficRatio", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_touchPOIEnabled({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_touchPOIEnabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_touchPOIEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_showsCompass({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_showsCompass", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_showsCompass", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<CGPoint> get_compassOrigin({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_compassOrigin", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_compassOrigin", {'__this__': this});
     return __result__ == null ? null : (CGPoint()..refId = __result__);
   }
   
   Future<CGSize> get_compassSize({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_compassSize", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_compassSize", {'__this__': this});
     return __result__ == null ? null : (CGSize()..refId = __result__);
   }
   
   Future<bool> get_showsScale({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_showsScale", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_showsScale", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<CGPoint> get_scaleOrigin({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_scaleOrigin", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_scaleOrigin", {'__this__': this});
     return __result__ == null ? null : (CGPoint()..refId = __result__);
   }
   
   Future<CGSize> get_scaleSize({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_scaleSize", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_scaleSize", {'__this__': this});
     return __result__ == null ? null : (CGSize()..refId = __result__);
   }
   
   Future<CGPoint> get_logoCenter({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_logoCenter", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_logoCenter", {'__this__': this});
     return __result__ == null ? null : (CGPoint()..refId = __result__);
   }
   
   Future<CGSize> get_logoSize({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_logoSize", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_logoSize", {'__this__': this});
     return __result__ == null ? null : (CGSize()..refId = __result__);
   }
   
   Future<double> get_metersPerPointForCurrentZoom({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_metersPerPointForCurrentZoom", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_metersPerPointForCurrentZoom", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_isAbroad({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isAbroad", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isAbroad", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_maxRenderFrame({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_maxRenderFrame", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_maxRenderFrame", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_isAllowDecreaseFrame({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isAllowDecreaseFrame", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isAllowDecreaseFrame", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_openGLESDisabled({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_openGLESDisabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_openGLESDisabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<CGPoint> get_screenAnchor({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_screenAnchor", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_screenAnchor", {'__this__': this});
     return __result__ == null ? null : (CGPoint()..refId = __result__);
   }
   
   Future<num> get_showsWorldMap({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsWorldMap", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsWorldMap", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<num> get_mapLanguage({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_mapLanguage", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_mapLanguage", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<List<dynamic>> get_annotations({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_annotations", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_annotations", {'__this__': this});
     return __result__ == null ? null : ((__result__ as List).cast<dynamic>());
   }
   
   Future<List<dynamic>> get_selectedAnnotations({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_selectedAnnotations", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_selectedAnnotations", {'__this__': this});
     return __result__ == null ? null : ((__result__ as List).cast<dynamic>());
   }
   
   Future<CGRect> get_annotationVisibleRect({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_annotationVisibleRect", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_annotationVisibleRect", {'__this__': this});
     return __result__ == null ? null : (CGRect()..refId = __result__);
   }
   
   Future<bool> get_allowsAnnotationViewSorting({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_allowsAnnotationViewSorting", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_allowsAnnotationViewSorting", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_showsUserLocation({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_showsUserLocation", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_showsUserLocation", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<MAUserLocation> get_userLocation({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_userLocation", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_userLocation", {'__this__': this});
     return __result__ == null ? null : (MAUserLocation()..refId = __result__);
   }
   
   Future<bool> get_customizeUserLocationAccuracyCircleRepresentation({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_customizeUserLocationAccuracyCircleRepresentation", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_customizeUserLocationAccuracyCircleRepresentation", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<MACircle> get_userLocationAccuracyCircle({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_userLocationAccuracyCircle", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_userLocationAccuracyCircle", {'__this__': this});
     return __result__ == null ? null : (MACircle()..refId = __result__);
   }
   
   Future<MAUserTrackingMode> get_userTrackingMode({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_userTrackingMode", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_userTrackingMode", {'__this__': this});
     return __result__ == null ? null : ((__result__ as int).toMAUserTrackingMode());
   }
   
   Future<bool> get_userLocationVisible({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isUserLocationVisible", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isUserLocationVisible", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_distanceFilter({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_distanceFilter", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_distanceFilter", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_desiredAccuracy({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_desiredAccuracy", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_desiredAccuracy", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_headingFilter({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_headingFilter", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_headingFilter", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_pausesLocationUpdatesAutomatically({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_pausesLocationUpdatesAutomatically", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_pausesLocationUpdatesAutomatically", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_allowsBackgroundLocationUpdates({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_allowsBackgroundLocationUpdates", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_allowsBackgroundLocationUpdates", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<List<dynamic>> get_overlays({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_overlays", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_overlays", {'__this__': this});
     return __result__ == null ? null : ((__result__ as List).cast<dynamic>());
   }
   
   Future<bool> get_showsIndoorMap({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsIndoorMap", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsIndoorMap", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_showsIndoorMapControl({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsIndoorMapControl", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsIndoorMapControl", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<CGSize> get_indoorMapControlSize({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_indoorMapControlSize", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_indoorMapControlSize", {'__this__': this});
     return __result__ == null ? null : (CGSize()..refId = __result__);
   }
   
   Future<bool> get_customMapStyleEnabled({bool viewChannel = true}) async {
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_customMapStyleEnabled", {'__this__': this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_customMapStyleEnabled", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -336,9 +336,9 @@ class MAMapView extends UIView  {
 
   //region setters
   Future<void> set_delegate(MAMapViewDelegate delegate, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_delegate', <String, dynamic>{'__this__': this, });
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('MAMapViewDelegate::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('MAMapViewDelegate::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
       .setMethodCallHandler((methodCall) async {
         try {
           final args = methodCall.arguments as Map;
@@ -696,277 +696,277 @@ class MAMapView extends UIView  {
   }
   
   Future<void> set_mapType(MAMapType mapType, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_mapType', <String, dynamic>{'__this__': this, "mapType": mapType.toValue()});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_mapType', <String, dynamic>{'__this__': this, "mapType": mapType.toValue()});
   
   
   }
   
   Future<void> set_centerCoordinate(CLLocationCoordinate2D centerCoordinate, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_centerCoordinate', <String, dynamic>{'__this__': this, "centerCoordinate": centerCoordinate});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_centerCoordinate', <String, dynamic>{'__this__': this, "centerCoordinate": centerCoordinate});
   
   
   }
   
   Future<void> set_region(MACoordinateRegion region, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_region', <String, dynamic>{'__this__': this, "region": region});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_region', <String, dynamic>{'__this__': this, "region": region});
   
   
   }
   
   Future<void> set_visibleMapRect(MAMapRect visibleMapRect, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_visibleMapRect', <String, dynamic>{'__this__': this, "visibleMapRect": visibleMapRect});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_visibleMapRect', <String, dynamic>{'__this__': this, "visibleMapRect": visibleMapRect});
   
   
   }
   
   Future<void> set_limitRegion(MACoordinateRegion limitRegion, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_limitRegion', <String, dynamic>{'__this__': this, "limitRegion": limitRegion});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_limitRegion', <String, dynamic>{'__this__': this, "limitRegion": limitRegion});
   
   
   }
   
   Future<void> set_limitMapRect(MAMapRect limitMapRect, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_limitMapRect', <String, dynamic>{'__this__': this, "limitMapRect": limitMapRect});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_limitMapRect', <String, dynamic>{'__this__': this, "limitMapRect": limitMapRect});
   
   
   }
   
   Future<void> set_zoomLevel(double zoomLevel, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_zoomLevel', <String, dynamic>{'__this__': this, "zoomLevel": zoomLevel});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_zoomLevel', <String, dynamic>{'__this__': this, "zoomLevel": zoomLevel});
   
   
   }
   
   Future<void> set_minZoomLevel(double minZoomLevel, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_minZoomLevel', <String, dynamic>{'__this__': this, "minZoomLevel": minZoomLevel});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_minZoomLevel', <String, dynamic>{'__this__': this, "minZoomLevel": minZoomLevel});
   
   
   }
   
   Future<void> set_maxZoomLevel(double maxZoomLevel, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_maxZoomLevel', <String, dynamic>{'__this__': this, "maxZoomLevel": maxZoomLevel});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_maxZoomLevel', <String, dynamic>{'__this__': this, "maxZoomLevel": maxZoomLevel});
   
   
   }
   
   Future<void> set_rotationDegree(double rotationDegree, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_rotationDegree', <String, dynamic>{'__this__': this, "rotationDegree": rotationDegree});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_rotationDegree', <String, dynamic>{'__this__': this, "rotationDegree": rotationDegree});
   
   
   }
   
   Future<void> set_cameraDegree(double cameraDegree, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_cameraDegree', <String, dynamic>{'__this__': this, "cameraDegree": cameraDegree});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_cameraDegree', <String, dynamic>{'__this__': this, "cameraDegree": cameraDegree});
   
   
   }
   
   Future<void> set_zoomingInPivotsAroundAnchorPoint(bool zoomingInPivotsAroundAnchorPoint, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_zoomingInPivotsAroundAnchorPoint', <String, dynamic>{'__this__': this, "zoomingInPivotsAroundAnchorPoint": zoomingInPivotsAroundAnchorPoint});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_zoomingInPivotsAroundAnchorPoint', <String, dynamic>{'__this__': this, "zoomingInPivotsAroundAnchorPoint": zoomingInPivotsAroundAnchorPoint});
   
   
   }
   
   Future<void> set_zoomEnabled(bool zoomEnabled, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_zoomEnabled', <String, dynamic>{'__this__': this, "zoomEnabled": zoomEnabled});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_zoomEnabled', <String, dynamic>{'__this__': this, "zoomEnabled": zoomEnabled});
   
   
   }
   
   Future<void> set_scrollEnabled(bool scrollEnabled, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_scrollEnabled', <String, dynamic>{'__this__': this, "scrollEnabled": scrollEnabled});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_scrollEnabled', <String, dynamic>{'__this__': this, "scrollEnabled": scrollEnabled});
   
   
   }
   
   Future<void> set_rotateEnabled(bool rotateEnabled, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_rotateEnabled', <String, dynamic>{'__this__': this, "rotateEnabled": rotateEnabled});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_rotateEnabled', <String, dynamic>{'__this__': this, "rotateEnabled": rotateEnabled});
   
   
   }
   
   Future<void> set_rotateCameraEnabled(bool rotateCameraEnabled, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_rotateCameraEnabled', <String, dynamic>{'__this__': this, "rotateCameraEnabled": rotateCameraEnabled});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_rotateCameraEnabled', <String, dynamic>{'__this__': this, "rotateCameraEnabled": rotateCameraEnabled});
   
   
   }
   
   Future<void> set_skyModelEnable(bool skyModelEnable, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_skyModelEnable', <String, dynamic>{'__this__': this, "skyModelEnable": skyModelEnable});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_skyModelEnable', <String, dynamic>{'__this__': this, "skyModelEnable": skyModelEnable});
   
   
   }
   
   Future<void> set_showsBuildings(bool showsBuildings, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showsBuildings', <String, dynamic>{'__this__': this, "showsBuildings": showsBuildings});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showsBuildings', <String, dynamic>{'__this__': this, "showsBuildings": showsBuildings});
   
   
   }
   
   Future<void> set_showsLabels(bool showsLabels, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showsLabels', <String, dynamic>{'__this__': this, "showsLabels": showsLabels});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showsLabels', <String, dynamic>{'__this__': this, "showsLabels": showsLabels});
   
   
   }
   
   Future<void> set_showTraffic(bool showTraffic, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showTraffic', <String, dynamic>{'__this__': this, "showTraffic": showTraffic});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showTraffic', <String, dynamic>{'__this__': this, "showTraffic": showTraffic});
   
   
   }
   
   Future<void> set_trafficRatio(double trafficRatio, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_trafficRatio', <String, dynamic>{'__this__': this, "trafficRatio": trafficRatio});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_trafficRatio', <String, dynamic>{'__this__': this, "trafficRatio": trafficRatio});
   
   
   }
   
   Future<void> set_touchPOIEnabled(bool touchPOIEnabled, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_touchPOIEnabled', <String, dynamic>{'__this__': this, "touchPOIEnabled": touchPOIEnabled});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_touchPOIEnabled', <String, dynamic>{'__this__': this, "touchPOIEnabled": touchPOIEnabled});
   
   
   }
   
   Future<void> set_showsCompass(bool showsCompass, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showsCompass', <String, dynamic>{'__this__': this, "showsCompass": showsCompass});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showsCompass', <String, dynamic>{'__this__': this, "showsCompass": showsCompass});
   
   
   }
   
   Future<void> set_compassOrigin(CGPoint compassOrigin, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_compassOrigin', <String, dynamic>{'__this__': this, "compassOrigin": compassOrigin});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_compassOrigin', <String, dynamic>{'__this__': this, "compassOrigin": compassOrigin});
   
   
   }
   
   Future<void> set_showsScale(bool showsScale, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showsScale', <String, dynamic>{'__this__': this, "showsScale": showsScale});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showsScale', <String, dynamic>{'__this__': this, "showsScale": showsScale});
   
   
   }
   
   Future<void> set_scaleOrigin(CGPoint scaleOrigin, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_scaleOrigin', <String, dynamic>{'__this__': this, "scaleOrigin": scaleOrigin});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_scaleOrigin', <String, dynamic>{'__this__': this, "scaleOrigin": scaleOrigin});
   
   
   }
   
   Future<void> set_logoCenter(CGPoint logoCenter, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_logoCenter', <String, dynamic>{'__this__': this, "logoCenter": logoCenter});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_logoCenter', <String, dynamic>{'__this__': this, "logoCenter": logoCenter});
   
   
   }
   
   Future<void> set_maxRenderFrame(int maxRenderFrame, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_maxRenderFrame', <String, dynamic>{'__this__': this, "maxRenderFrame": maxRenderFrame});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_maxRenderFrame', <String, dynamic>{'__this__': this, "maxRenderFrame": maxRenderFrame});
   
   
   }
   
   Future<void> set_isAllowDecreaseFrame(bool isAllowDecreaseFrame, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_isAllowDecreaseFrame', <String, dynamic>{'__this__': this, "isAllowDecreaseFrame": isAllowDecreaseFrame});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_isAllowDecreaseFrame', <String, dynamic>{'__this__': this, "isAllowDecreaseFrame": isAllowDecreaseFrame});
   
   
   }
   
   Future<void> set_openGLESDisabled(bool openGLESDisabled, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_openGLESDisabled', <String, dynamic>{'__this__': this, "openGLESDisabled": openGLESDisabled});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_openGLESDisabled', <String, dynamic>{'__this__': this, "openGLESDisabled": openGLESDisabled});
   
   
   }
   
   Future<void> set_screenAnchor(CGPoint screenAnchor, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_screenAnchor', <String, dynamic>{'__this__': this, "screenAnchor": screenAnchor});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_screenAnchor', <String, dynamic>{'__this__': this, "screenAnchor": screenAnchor});
   
   
   }
   
   Future<void> set_showsWorldMap(num showsWorldMap, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showsWorldMap', <String, dynamic>{'__this__': this, "showsWorldMap": showsWorldMap});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showsWorldMap', <String, dynamic>{'__this__': this, "showsWorldMap": showsWorldMap});
   
   
   }
   
   Future<void> set_mapLanguage(num mapLanguage, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_mapLanguage', <String, dynamic>{'__this__': this, "mapLanguage": mapLanguage});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_mapLanguage', <String, dynamic>{'__this__': this, "mapLanguage": mapLanguage});
   
   
   }
   
   Future<void> set_selectedAnnotations(List<dynamic> selectedAnnotations, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_selectedAnnotations', <String, dynamic>{'__this__': this, "selectedAnnotations": selectedAnnotations});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_selectedAnnotations', <String, dynamic>{'__this__': this, "selectedAnnotations": selectedAnnotations});
   
   
   }
   
   Future<void> set_allowsAnnotationViewSorting(bool allowsAnnotationViewSorting, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_allowsAnnotationViewSorting', <String, dynamic>{'__this__': this, "allowsAnnotationViewSorting": allowsAnnotationViewSorting});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_allowsAnnotationViewSorting', <String, dynamic>{'__this__': this, "allowsAnnotationViewSorting": allowsAnnotationViewSorting});
   
   
   }
   
   Future<void> set_showsUserLocation(bool showsUserLocation, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showsUserLocation', <String, dynamic>{'__this__': this, "showsUserLocation": showsUserLocation});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showsUserLocation', <String, dynamic>{'__this__': this, "showsUserLocation": showsUserLocation});
   
   
   }
   
   Future<void> set_customizeUserLocationAccuracyCircleRepresentation(bool customizeUserLocationAccuracyCircleRepresentation, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_customizeUserLocationAccuracyCircleRepresentation', <String, dynamic>{'__this__': this, "customizeUserLocationAccuracyCircleRepresentation": customizeUserLocationAccuracyCircleRepresentation});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_customizeUserLocationAccuracyCircleRepresentation', <String, dynamic>{'__this__': this, "customizeUserLocationAccuracyCircleRepresentation": customizeUserLocationAccuracyCircleRepresentation});
   
   
   }
   
   Future<void> set_userTrackingMode(MAUserTrackingMode userTrackingMode, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_userTrackingMode', <String, dynamic>{'__this__': this, "userTrackingMode": userTrackingMode.toValue()});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_userTrackingMode', <String, dynamic>{'__this__': this, "userTrackingMode": userTrackingMode.toValue()});
   
   
   }
   
   Future<void> set_distanceFilter(double distanceFilter, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_distanceFilter', <String, dynamic>{'__this__': this, "distanceFilter": distanceFilter});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_distanceFilter', <String, dynamic>{'__this__': this, "distanceFilter": distanceFilter});
   
   
   }
   
   Future<void> set_desiredAccuracy(double desiredAccuracy, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_desiredAccuracy', <String, dynamic>{'__this__': this, "desiredAccuracy": desiredAccuracy});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_desiredAccuracy', <String, dynamic>{'__this__': this, "desiredAccuracy": desiredAccuracy});
   
   
   }
   
   Future<void> set_headingFilter(double headingFilter, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_headingFilter', <String, dynamic>{'__this__': this, "headingFilter": headingFilter});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_headingFilter', <String, dynamic>{'__this__': this, "headingFilter": headingFilter});
   
   
   }
   
   Future<void> set_pausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_pausesLocationUpdatesAutomatically', <String, dynamic>{'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_pausesLocationUpdatesAutomatically', <String, dynamic>{'__this__': this, "pausesLocationUpdatesAutomatically": pausesLocationUpdatesAutomatically});
   
   
   }
   
   Future<void> set_allowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_allowsBackgroundLocationUpdates', <String, dynamic>{'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_allowsBackgroundLocationUpdates', <String, dynamic>{'__this__': this, "allowsBackgroundLocationUpdates": allowsBackgroundLocationUpdates});
   
   
   }
   
   Future<void> set_showsIndoorMap(bool showsIndoorMap, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showsIndoorMap', <String, dynamic>{'__this__': this, "showsIndoorMap": showsIndoorMap});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showsIndoorMap', <String, dynamic>{'__this__': this, "showsIndoorMap": showsIndoorMap});
   
   
   }
   
   Future<void> set_showsIndoorMapControl(bool showsIndoorMapControl, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_showsIndoorMapControl', <String, dynamic>{'__this__': this, "showsIndoorMapControl": showsIndoorMapControl});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_showsIndoorMapControl', <String, dynamic>{'__this__': this, "showsIndoorMapControl": showsIndoorMapControl});
   
   
   }
   
   Future<void> set_customMapStyleEnabled(bool customMapStyleEnabled, {bool viewChannel = true}) async {
-    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::set_customMapStyleEnabled', <String, dynamic>{'__this__': this, "customMapStyleEnabled": customMapStyleEnabled});
+    await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::set_customMapStyleEnabled', <String, dynamic>{'__this__': this, "customMapStyleEnabled": customMapStyleEnabled});
   
   
   }
@@ -982,7 +982,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setRegion_animated', {"region": region, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setRegion_animated', {"region": region, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1005,7 +1005,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::regionThatFits', {"region": region, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::regionThatFits', {"region": region, "__this__": this});
   
   
     // handle native call
@@ -1028,7 +1028,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setVisibleMapRect_animated', {"mapRect": mapRect, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setVisibleMapRect_animated', {"mapRect": mapRect, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1051,7 +1051,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::mapRectThatFits', {"mapRect": mapRect, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::mapRectThatFits', {"mapRect": mapRect, "__this__": this});
   
   
     // handle native call
@@ -1074,7 +1074,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::mapRectThatFits_edgePadding', {"mapRect": mapRect, "insets": insets, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::mapRectThatFits_edgePadding', {"mapRect": mapRect, "insets": insets, "__this__": this});
   
   
     // handle native call
@@ -1097,7 +1097,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setVisibleMapRect_edgePadding_animated', {"mapRect": mapRect, "insets": insets, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setVisibleMapRect_edgePadding_animated', {"mapRect": mapRect, "insets": insets, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1120,7 +1120,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCenterCoordinate_animated', {"coordinate": coordinate, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCenterCoordinate_animated', {"coordinate": coordinate, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1143,7 +1143,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setZoomLevel_animated', {"zoomLevel": zoomLevel, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setZoomLevel_animated', {"zoomLevel": zoomLevel, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1166,7 +1166,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setZoomLevel_atPivot_animated', {"zoomLevel": zoomLevel, "pivot": pivot, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setZoomLevel_atPivot_animated', {"zoomLevel": zoomLevel, "pivot": pivot, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1189,7 +1189,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setRotationDegree_animated_duration', {"rotationDegree": rotationDegree, "animated": animated, "duration": duration, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setRotationDegree_animated_duration', {"rotationDegree": rotationDegree, "animated": animated, "duration": duration, "__this__": this});
   
   
     // handle native call
@@ -1212,7 +1212,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCameraDegree_animated_duration', {"cameraDegree": cameraDegree, "animated": animated, "duration": duration, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCameraDegree_animated_duration', {"cameraDegree": cameraDegree, "animated": animated, "duration": duration, "__this__": this});
   
   
     // handle native call
@@ -1235,7 +1235,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::getMapStatus', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::getMapStatus', {"__this__": this});
   
   
     // handle native call
@@ -1258,7 +1258,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setMapStatus_animated', {"status": status, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setMapStatus_animated', {"status": status, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1281,7 +1281,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setMapStatus_animated_duration', {"status": status, "animated": animated, "duration": duration, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setMapStatus_animated_duration', {"status": status, "animated": animated, "duration": duration, "__this__": this});
   
   
     // handle native call
@@ -1304,7 +1304,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCompassImage', {"image": image, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCompassImage', {"image": image, "__this__": this});
   
   
     // handle native call
@@ -1327,7 +1327,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::takeSnapshotInRect', {"rect": rect, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::takeSnapshotInRect', {"rect": rect, "__this__": this});
   
   
     // handle native call
@@ -1350,11 +1350,11 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::takeSnapshotInRect_withCompletionBlock', {"rect": rect, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::takeSnapshotInRect_withCompletionBlock', {"rect": rect, "__this__": this});
   
   
     // handle native call
-    MethodChannel('void|UIImage*#resultImage,NSInteger#state::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('void|UIImage*#resultImage,NSInteger#state::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -1394,7 +1394,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::metersPerPointForZoomLevel', {"zoomLevel": zoomLevel, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::metersPerPointForZoomLevel', {"zoomLevel": zoomLevel, "__this__": this});
   
   
     // handle native call
@@ -1417,7 +1417,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::convertCoordinate_toPointToView', {"coordinate": coordinate, "view": view, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::convertCoordinate_toPointToView', {"coordinate": coordinate, "view": view, "__this__": this});
   
   
     // handle native call
@@ -1440,7 +1440,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::convertPoint_toCoordinateFromView', {"point": point, "view": view, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::convertPoint_toCoordinateFromView', {"point": point, "view": view, "__this__": this});
   
   
     // handle native call
@@ -1463,7 +1463,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::convertRegion_toRectToView', {"region": region, "view": view, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::convertRegion_toRectToView', {"region": region, "view": view, "__this__": this});
   
   
     // handle native call
@@ -1486,7 +1486,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::convertRect_toRegionFromView', {"rect": rect, "view": view, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::convertRect_toRegionFromView', {"rect": rect, "view": view, "__this__": this});
   
   
     // handle native call
@@ -1509,7 +1509,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::reloadMap', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::reloadMap', {"__this__": this});
   
   
     // handle native call
@@ -1532,7 +1532,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::clearDisk', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::clearDisk', {"__this__": this});
   
   
     // handle native call
@@ -1555,7 +1555,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::reloadInternalTexture', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::reloadInternalTexture', {"__this__": this});
   
   
     // handle native call
@@ -1578,7 +1578,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::mapContentApprovalNumber', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::mapContentApprovalNumber', {"__this__": this});
   
   
     // handle native call
@@ -1601,7 +1601,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::satelliteImageApprovalNumber', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::satelliteImageApprovalNumber', {"__this__": this});
   
   
     // handle native call
@@ -1624,7 +1624,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::forceRefresh', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::forceRefresh', {"__this__": this});
   
   
     // handle native call
@@ -1647,7 +1647,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addAnnotation', {"annotation": annotation, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addAnnotation', {"annotation": annotation, "__this__": this});
   
   
     // handle native call
@@ -1670,7 +1670,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addAnnotations', {"annotations": annotations, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addAnnotations', {"annotations": annotations, "__this__": this});
   
   
     // handle native call
@@ -1693,7 +1693,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::removeAnnotation', {"annotation": annotation, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::removeAnnotation', {"annotation": annotation, "__this__": this});
   
   
     // handle native call
@@ -1716,7 +1716,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::removeAnnotations', {"annotations": annotations, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::removeAnnotations', {"annotations": annotations, "__this__": this});
   
   
     // handle native call
@@ -1739,7 +1739,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::viewForAnnotation', {"annotation": annotation, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::viewForAnnotation', {"annotation": annotation, "__this__": this});
   
   
     // handle native call
@@ -1762,7 +1762,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::dequeueReusableAnnotationViewWithIdentifier', {"identifier": identifier, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::dequeueReusableAnnotationViewWithIdentifier', {"identifier": identifier, "__this__": this});
   
   
     // handle native call
@@ -1785,7 +1785,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::selectAnnotation_animated', {"annotation": annotation, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::selectAnnotation_animated', {"annotation": annotation, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1808,7 +1808,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::deselectAnnotation_animated', {"annotation": annotation, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::deselectAnnotation_animated', {"annotation": annotation, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1831,7 +1831,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::showAnnotations_animated', {"annotations": annotations, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::showAnnotations_animated', {"annotations": annotations, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1854,7 +1854,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::showAnnotations_edgePadding_animated', {"annotations": annotations, "insets": insets, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::showAnnotations_edgePadding_animated', {"annotations": annotations, "insets": insets, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1877,7 +1877,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setUserTrackingMode_animated', {"mode": mode.toValue(), "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setUserTrackingMode_animated', {"mode": mode.toValue(), "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -1900,7 +1900,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::updateUserLocationRepresentation', {"representation": representation, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::updateUserLocationRepresentation', {"representation": representation, "__this__": this});
   
   
     // handle native call
@@ -1923,7 +1923,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::overlaysInLevel', {"level": level.toValue(), "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::overlaysInLevel', {"level": level.toValue(), "__this__": this});
   
   
     // handle native call
@@ -1946,7 +1946,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addOverlay', {"overlay": overlay, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addOverlay', {"overlay": overlay, "__this__": this});
   
   
     // handle native call
@@ -1969,7 +1969,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addOverlays', {"overlays": overlays, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addOverlays', {"overlays": overlays, "__this__": this});
   
   
     // handle native call
@@ -1992,7 +1992,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addOverlay_level', {"overlay": overlay, "level": level.toValue(), "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addOverlay_level', {"overlay": overlay, "level": level.toValue(), "__this__": this});
   
   
     // handle native call
@@ -2015,7 +2015,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addOverlays_level', {"overlays": overlays, "level": level.toValue(), "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addOverlays_level', {"overlays": overlays, "level": level.toValue(), "__this__": this});
   
   
     // handle native call
@@ -2038,7 +2038,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::removeOverlay', {"overlay": overlay, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::removeOverlay', {"overlay": overlay, "__this__": this});
   
   
     // handle native call
@@ -2061,7 +2061,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::removeOverlays', {"overlays": overlays, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::removeOverlays', {"overlays": overlays, "__this__": this});
   
   
     // handle native call
@@ -2084,7 +2084,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_atIndex_level', {"overlay": overlay, "index": index, "level": level.toValue(), "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_atIndex_level', {"overlay": overlay, "index": index, "level": level.toValue(), "__this__": this});
   
   
     // handle native call
@@ -2107,7 +2107,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_aboveOverlay', {"overlay": overlay, "sibling": sibling, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_aboveOverlay', {"overlay": overlay, "sibling": sibling, "__this__": this});
   
   
     // handle native call
@@ -2130,7 +2130,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_belowOverlay', {"overlay": overlay, "sibling": sibling, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_belowOverlay', {"overlay": overlay, "sibling": sibling, "__this__": this});
   
   
     // handle native call
@@ -2153,7 +2153,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_atIndex', {"overlay": overlay, "index": index, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_atIndex', {"overlay": overlay, "index": index, "__this__": this});
   
   
     // handle native call
@@ -2176,7 +2176,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlayAtIndex_withOverlayAtIndex', {"index1": index1, "index2": index2, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlayAtIndex_withOverlayAtIndex', {"index1": index1, "index2": index2, "__this__": this});
   
   
     // handle native call
@@ -2199,7 +2199,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlayAtIndex_withOverlayAtIndex_atLevel', {"index1": index1, "index2": index2, "level": level.toValue(), "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlayAtIndex_withOverlayAtIndex_atLevel', {"index1": index1, "index2": index2, "level": level.toValue(), "__this__": this});
   
   
     // handle native call
@@ -2222,7 +2222,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlay_withOverlay', {"overlay1": overlay1, "overlay2": overlay2, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlay_withOverlay', {"overlay1": overlay1, "overlay2": overlay2, "__this__": this});
   
   
     // handle native call
@@ -2245,7 +2245,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::rendererForOverlay', {"overlay": overlay, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::rendererForOverlay', {"overlay": overlay, "__this__": this});
   
   
     // handle native call
@@ -2268,7 +2268,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::showOverlays_animated', {"overlays": overlays, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::showOverlays_animated', {"overlays": overlays, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -2291,7 +2291,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::showOverlays_edgePadding_animated', {"overlays": overlays, "insets": insets, "animated": animated, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::showOverlays_edgePadding_animated', {"overlays": overlays, "insets": insets, "animated": animated, "__this__": this});
   
   
     // handle native call
@@ -2314,7 +2314,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::getHittedPolylinesWith_traverseAll', {"tappedCoord": tappedCoord, "traverseAll": traverseAll, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::getHittedPolylinesWith_traverseAll', {"tappedCoord": tappedCoord, "traverseAll": traverseAll, "__this__": this});
   
   
     // handle native call
@@ -2337,7 +2337,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setIndoorMapControlOrigin', {"origin": origin, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setIndoorMapControlOrigin', {"origin": origin, "__this__": this});
   
   
     // handle native call
@@ -2360,7 +2360,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCurrentIndoorMapFloorIndex', {"floorIndex": floorIndex, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCurrentIndoorMapFloorIndex', {"floorIndex": floorIndex, "__this__": this});
   
   
     // handle native call
@@ -2383,7 +2383,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::clearIndoorMapCache', {"__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::clearIndoorMapCache', {"__this__": this});
   
   
     // handle native call
@@ -2406,7 +2406,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleWithWebData', {"data": data, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleWithWebData', {"data": data, "__this__": this});
   
   
     // handle native call
@@ -2429,7 +2429,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCustomTextureResourcePath', {"customTextureResourcePath": customTextureResourcePath, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCustomTextureResourcePath', {"customTextureResourcePath": customTextureResourcePath, "__this__": this});
   
   
     // handle native call
@@ -2452,7 +2452,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleID', {"customMapStyleID": customMapStyleID, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleID', {"customMapStyleID": customMapStyleID, "__this__": this});
   
   
     // handle native call
@@ -2475,7 +2475,7 @@ class MAMapView extends UIView  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleOptions', {"styleOptions": styleOptions, "__this__": this});
+    final __result__ = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleOptions', {"styleOptions": styleOptions, "__this__": this});
   
   
     // handle native call
@@ -2501,406 +2501,406 @@ class MAMapView extends UIView  {
 extension MAMapView_Batch on List<MAMapView> {
   //region getters
   Future<List<MAMapType>> get_mapType_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_mapType_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_mapType_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toMAMapType()).toList();
     return typedResult;
   }
   
   Future<List<CLLocationCoordinate2D>> get_centerCoordinate_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_centerCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_centerCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MACoordinateRegion>> get_region_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_region_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_region_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MACoordinateRegion()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MAMapRect>> get_visibleMapRect_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_visibleMapRect_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_visibleMapRect_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAMapRect()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MACoordinateRegion>> get_limitRegion_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_limitRegion_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_limitRegion_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MACoordinateRegion()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MAMapRect>> get_limitMapRect_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_limitMapRect_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_limitMapRect_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAMapRect()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_zoomLevel_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_zoomLevel_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_zoomLevel_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_minZoomLevel_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_minZoomLevel_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_minZoomLevel_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_maxZoomLevel_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_maxZoomLevel_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_maxZoomLevel_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_rotationDegree_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_rotationDegree_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_rotationDegree_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_cameraDegree_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_cameraDegree_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_cameraDegree_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_zoomingInPivotsAroundAnchorPoint_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_zoomingInPivotsAroundAnchorPoint_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_zoomingInPivotsAroundAnchorPoint_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_zoomEnabled_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isZoomEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isZoomEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_scrollEnabled_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isScrollEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isScrollEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_rotateEnabled_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isRotateEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isRotateEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_rotateCameraEnabled_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isRotateCameraEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isRotateCameraEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_skyModelEnable_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isSkyModelEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isSkyModelEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_showsBuildings_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsBuildings_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsBuildings_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_showsLabels_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsLabels_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsLabels_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_showTraffic_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowTraffic_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowTraffic_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_trafficRatio_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_trafficRatio_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_trafficRatio_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_touchPOIEnabled_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_touchPOIEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_touchPOIEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_showsCompass_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_showsCompass_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_showsCompass_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<CGPoint>> get_compassOrigin_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_compassOrigin_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_compassOrigin_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGSize>> get_compassSize_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_compassSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_compassSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGSize()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_showsScale_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_showsScale_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_showsScale_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<CGPoint>> get_scaleOrigin_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_scaleOrigin_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_scaleOrigin_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGSize>> get_scaleSize_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_scaleSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_scaleSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGSize()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGPoint>> get_logoCenter_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_logoCenter_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_logoCenter_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGSize>> get_logoSize_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_logoSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_logoSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGSize()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_metersPerPointForCurrentZoom_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_metersPerPointForCurrentZoom_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_metersPerPointForCurrentZoom_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_isAbroad_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isAbroad_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isAbroad_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_maxRenderFrame_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_maxRenderFrame_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_maxRenderFrame_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_isAllowDecreaseFrame_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isAllowDecreaseFrame_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isAllowDecreaseFrame_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_openGLESDisabled_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_openGLESDisabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_openGLESDisabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<CGPoint>> get_screenAnchor_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_screenAnchor_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_screenAnchor_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<num>> get_showsWorldMap_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsWorldMap_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsWorldMap_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<num>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<num>> get_mapLanguage_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_mapLanguage_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_mapLanguage_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<num>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<List<dynamic>>> get_annotations_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_annotations_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_annotations_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
     return typedResult;
   }
   
   Future<List<List<dynamic>>> get_selectedAnnotations_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_selectedAnnotations_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_selectedAnnotations_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
     return typedResult;
   }
   
   Future<List<CGRect>> get_annotationVisibleRect_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_annotationVisibleRect_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_annotationVisibleRect_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGRect()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_allowsAnnotationViewSorting_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_allowsAnnotationViewSorting_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_allowsAnnotationViewSorting_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_showsUserLocation_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_showsUserLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_showsUserLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<MAUserLocation>> get_userLocation_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_userLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_userLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAUserLocation()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_customizeUserLocationAccuracyCircleRepresentation_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_customizeUserLocationAccuracyCircleRepresentation_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_customizeUserLocationAccuracyCircleRepresentation_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<MACircle>> get_userLocationAccuracyCircle_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_userLocationAccuracyCircle_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_userLocationAccuracyCircle_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MACircle()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MAUserTrackingMode>> get_userTrackingMode_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_userTrackingMode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_userTrackingMode_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toMAUserTrackingMode()).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_userLocationVisible_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isUserLocationVisible_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isUserLocationVisible_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_distanceFilter_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_distanceFilter_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_distanceFilter_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_desiredAccuracy_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_desiredAccuracy_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_desiredAccuracy_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_headingFilter_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_headingFilter_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_headingFilter_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_pausesLocationUpdatesAutomatically_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_pausesLocationUpdatesAutomatically_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_pausesLocationUpdatesAutomatically_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_allowsBackgroundLocationUpdates_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_allowsBackgroundLocationUpdates_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_allowsBackgroundLocationUpdates_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<List<dynamic>>> get_overlays_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_overlays_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_overlays_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_showsIndoorMap_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsIndoorMap_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsIndoorMap_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_showsIndoorMapControl_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsIndoorMapControl_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_isShowsIndoorMapControl_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<CGSize>> get_indoorMapControlSize_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_indoorMapControlSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_indoorMapControlSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGSize()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_customMapStyleEnabled_batch({bool viewChannel = true}) async {
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMapView::get_customMapStyleEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMapView::get_customMapStyleEnabled_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
@@ -3195,7 +3195,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setRegion_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"region": region[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setRegion_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"region": region[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3214,7 +3214,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::regionThatFits_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::regionThatFits_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"region": region[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3233,7 +3233,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setVisibleMapRect_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mapRect": mapRect[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setVisibleMapRect_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mapRect": mapRect[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3252,7 +3252,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::mapRectThatFits_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mapRect": mapRect[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::mapRectThatFits_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mapRect": mapRect[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3271,7 +3271,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::mapRectThatFits_edgePadding_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mapRect": mapRect[__i__], "insets": insets[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::mapRectThatFits_edgePadding_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mapRect": mapRect[__i__], "insets": insets[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3290,7 +3290,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setVisibleMapRect_edgePadding_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mapRect": mapRect[__i__], "insets": insets[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setVisibleMapRect_edgePadding_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mapRect": mapRect[__i__], "insets": insets[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3309,7 +3309,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCenterCoordinate_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"coordinate": coordinate[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCenterCoordinate_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"coordinate": coordinate[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3328,7 +3328,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setZoomLevel_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"zoomLevel": zoomLevel[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setZoomLevel_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"zoomLevel": zoomLevel[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3347,7 +3347,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setZoomLevel_atPivot_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"zoomLevel": zoomLevel[__i__], "pivot": pivot[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setZoomLevel_atPivot_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"zoomLevel": zoomLevel[__i__], "pivot": pivot[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3366,7 +3366,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setRotationDegree_animated_duration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rotationDegree": rotationDegree[__i__], "animated": animated[__i__], "duration": duration[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setRotationDegree_animated_duration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rotationDegree": rotationDegree[__i__], "animated": animated[__i__], "duration": duration[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3385,7 +3385,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCameraDegree_animated_duration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"cameraDegree": cameraDegree[__i__], "animated": animated[__i__], "duration": duration[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCameraDegree_animated_duration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"cameraDegree": cameraDegree[__i__], "animated": animated[__i__], "duration": duration[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3404,7 +3404,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::getMapStatus_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::getMapStatus_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3423,7 +3423,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setMapStatus_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"status": status[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setMapStatus_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"status": status[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3442,7 +3442,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setMapStatus_animated_duration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"status": status[__i__], "animated": animated[__i__], "duration": duration[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setMapStatus_animated_duration_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"status": status[__i__], "animated": animated[__i__], "duration": duration[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3461,7 +3461,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCompassImage_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"image": image[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCompassImage_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"image": image[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3480,7 +3480,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::takeSnapshotInRect_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rect": rect[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::takeSnapshotInRect_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rect": rect[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3499,7 +3499,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::metersPerPointForZoomLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"zoomLevel": zoomLevel[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::metersPerPointForZoomLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"zoomLevel": zoomLevel[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3518,7 +3518,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::convertCoordinate_toPointToView_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"coordinate": coordinate[__i__], "view": view[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::convertCoordinate_toPointToView_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"coordinate": coordinate[__i__], "view": view[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3537,7 +3537,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::convertPoint_toCoordinateFromView_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"point": point[__i__], "view": view[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::convertPoint_toCoordinateFromView_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"point": point[__i__], "view": view[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3556,7 +3556,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::convertRegion_toRectToView_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"region": region[__i__], "view": view[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::convertRegion_toRectToView_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"region": region[__i__], "view": view[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3575,7 +3575,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::convertRect_toRegionFromView_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rect": rect[__i__], "view": view[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::convertRect_toRegionFromView_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rect": rect[__i__], "view": view[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3594,7 +3594,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::reloadMap_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::reloadMap_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3613,7 +3613,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::clearDisk_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::clearDisk_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3632,7 +3632,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::reloadInternalTexture_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::reloadInternalTexture_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3651,7 +3651,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::mapContentApprovalNumber_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::mapContentApprovalNumber_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3670,7 +3670,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::satelliteImageApprovalNumber_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::satelliteImageApprovalNumber_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3689,7 +3689,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::forceRefresh_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::forceRefresh_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3708,7 +3708,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addAnnotation_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addAnnotation_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3727,7 +3727,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addAnnotations_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotations": annotations[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addAnnotations_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotations": annotations[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3746,7 +3746,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::removeAnnotation_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::removeAnnotation_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3765,7 +3765,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::removeAnnotations_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotations": annotations[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::removeAnnotations_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotations": annotations[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3784,7 +3784,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::viewForAnnotation_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::viewForAnnotation_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3803,7 +3803,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::dequeueReusableAnnotationViewWithIdentifier_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"identifier": identifier[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::dequeueReusableAnnotationViewWithIdentifier_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"identifier": identifier[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3822,7 +3822,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::selectAnnotation_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::selectAnnotation_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3841,7 +3841,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::deselectAnnotation_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::deselectAnnotation_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotation": annotation[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3860,7 +3860,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::showAnnotations_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotations": annotations[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::showAnnotations_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotations": annotations[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3879,7 +3879,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::showAnnotations_edgePadding_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotations": annotations[__i__], "insets": insets[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::showAnnotations_edgePadding_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"annotations": annotations[__i__], "insets": insets[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3898,7 +3898,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setUserTrackingMode_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mode": mode[__i__].toValue(), "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setUserTrackingMode_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"mode": mode[__i__].toValue(), "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3917,7 +3917,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::updateUserLocationRepresentation_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"representation": representation[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::updateUserLocationRepresentation_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"representation": representation[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3936,7 +3936,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::overlaysInLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"level": level[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::overlaysInLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"level": level[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3955,7 +3955,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3974,7 +3974,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addOverlays_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addOverlays_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -3993,7 +3993,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addOverlay_level_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "level": level[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addOverlay_level_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "level": level[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4012,7 +4012,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::addOverlays_level_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "level": level[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::addOverlays_level_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "level": level[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4031,7 +4031,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::removeOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::removeOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4050,7 +4050,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::removeOverlays_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::removeOverlays_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4069,7 +4069,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_atIndex_level_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "index": index[__i__], "level": level[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_atIndex_level_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "index": index[__i__], "level": level[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4088,7 +4088,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_aboveOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "sibling": sibling[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_aboveOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "sibling": sibling[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4107,7 +4107,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_belowOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "sibling": sibling[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_belowOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "sibling": sibling[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4126,7 +4126,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_atIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "index": index[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::insertOverlay_atIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "index": index[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4145,7 +4145,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlayAtIndex_withOverlayAtIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"index1": index1[__i__], "index2": index2[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlayAtIndex_withOverlayAtIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"index1": index1[__i__], "index2": index2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4164,7 +4164,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlayAtIndex_withOverlayAtIndex_atLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"index1": index1[__i__], "index2": index2[__i__], "level": level[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlayAtIndex_withOverlayAtIndex_atLevel_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"index1": index1[__i__], "index2": index2[__i__], "level": level[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4183,7 +4183,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlay_withOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay1": overlay1[__i__], "overlay2": overlay2[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::exchangeOverlay_withOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay1": overlay1[__i__], "overlay2": overlay2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4202,7 +4202,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::rendererForOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::rendererForOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlay": overlay[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4221,7 +4221,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::showOverlays_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::showOverlays_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4240,7 +4240,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::showOverlays_edgePadding_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "insets": insets[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::showOverlays_edgePadding_animated_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"overlays": overlays[__i__], "insets": insets[__i__], "animated": animated[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4259,7 +4259,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::getHittedPolylinesWith_traverseAll_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"tappedCoord": tappedCoord[__i__], "traverseAll": traverseAll[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::getHittedPolylinesWith_traverseAll_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"tappedCoord": tappedCoord[__i__], "traverseAll": traverseAll[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4278,7 +4278,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setIndoorMapControlOrigin_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"origin": origin[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setIndoorMapControlOrigin_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"origin": origin[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4297,7 +4297,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCurrentIndoorMapFloorIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"floorIndex": floorIndex[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCurrentIndoorMapFloorIndex_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"floorIndex": floorIndex[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4316,7 +4316,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::clearIndoorMapCache_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::clearIndoorMapCache_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4335,7 +4335,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleWithWebData_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"data": data[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleWithWebData_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"data": data[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4354,7 +4354,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCustomTextureResourcePath_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"customTextureResourcePath": customTextureResourcePath[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCustomTextureResourcePath_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"customTextureResourcePath": customTextureResourcePath[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4373,7 +4373,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleID_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"customMapStyleID": customMapStyleID[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleID_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"customMapStyleID": customMapStyleID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -4392,7 +4392,7 @@ extension MAMapView_Batch on List<MAMapView> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"styleOptions": styleOptions[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel(viewChannel ? 'me.yohom/amap_map_fluttify/MAMapView' : 'me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMapView::setCustomMapStyleOptions_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"styleOptions": styleOptions[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

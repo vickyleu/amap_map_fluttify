@@ -34,7 +34,7 @@ mixin com_amap_api_maps_AMap_MultiPositionInfoWindowAdapter on com_amap_api_maps
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getInfoWindowClick', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getInfoWindowClick', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -57,7 +57,7 @@ mixin com_amap_api_maps_AMap_MultiPositionInfoWindowAdapter on com_amap_api_maps
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getOverturnInfoWindow', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getOverturnInfoWindow', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -80,7 +80,7 @@ mixin com_amap_api_maps_AMap_MultiPositionInfoWindowAdapter on com_amap_api_maps
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getOverturnInfoWindowClick', {"var1": var1, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getOverturnInfoWindowClick', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -106,7 +106,7 @@ extension com_amap_api_maps_AMap_MultiPositionInfoWindowAdapter_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getInfoWindowClick_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getInfoWindowClick_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -125,7 +125,7 @@ extension com_amap_api_maps_AMap_MultiPositionInfoWindowAdapter_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getOverturnInfoWindow_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getOverturnInfoWindow_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -144,7 +144,7 @@ extension com_amap_api_maps_AMap_MultiPositionInfoWindowAdapter_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getOverturnInfoWindowClick_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.AMap.MultiPositionInfoWindowAdapter::getOverturnInfoWindowClick_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

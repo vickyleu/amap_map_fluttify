@@ -24,7 +24,7 @@ class MAMultiColoredPolylineRenderer extends MAPolylineRenderer  {
 
   //region creators
   static Future<MAMultiColoredPolylineRenderer> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAMultiColoredPolylineRenderer', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAMultiColoredPolylineRenderer', {'init': init});
     final object = MAMultiColoredPolylineRenderer()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAMultiColoredPolylineRenderer extends MAPolylineRenderer  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAMultiColoredPolylineRenderer', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAMultiColoredPolylineRenderer', {'length': length, 'init': init});
   
     final List<MAMultiColoredPolylineRenderer> typedResult = resultBatch.map((result) => MAMultiColoredPolylineRenderer()..refId = result).toList();
     return typedResult;
@@ -43,17 +43,17 @@ class MAMultiColoredPolylineRenderer extends MAPolylineRenderer  {
 
   //region getters
   Future<MAMultiPolyline> get_multiPolyline() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_multiPolyline", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_multiPolyline", {'__this__': this});
     return __result__ == null ? null : (MAMultiPolyline()..refId = __result__);
   }
   
   Future<List<UIColor>> get_strokeColors() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_strokeColors", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_strokeColors", {'__this__': this});
     return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => UIColor()..refId = __it__).toList());
   }
   
   Future<bool> get_gradient() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_isGradient", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_isGradient", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -61,13 +61,13 @@ class MAMultiColoredPolylineRenderer extends MAPolylineRenderer  {
 
   //region setters
   Future<void> set_strokeColors(List<UIColor> strokeColors) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiColoredPolylineRenderer::set_strokeColors', <String, dynamic>{'__this__': this, "strokeColors": strokeColors});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiColoredPolylineRenderer::set_strokeColors', <String, dynamic>{'__this__': this, "strokeColors": strokeColors});
   
   
   }
   
   Future<void> set_gradient(bool gradient) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiColoredPolylineRenderer::set_gradient', <String, dynamic>{'__this__': this, "gradient": gradient});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiColoredPolylineRenderer::set_gradient', <String, dynamic>{'__this__': this, "gradient": gradient});
   
   
   }
@@ -83,7 +83,7 @@ class MAMultiColoredPolylineRenderer extends MAPolylineRenderer  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiColoredPolylineRenderer::initWithMultiPolyline', {"multiPolyline": multiPolyline, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiColoredPolylineRenderer::initWithMultiPolyline', {"multiPolyline": multiPolyline, "__this__": this});
   
   
     // handle native call
@@ -109,21 +109,21 @@ class MAMultiColoredPolylineRenderer extends MAPolylineRenderer  {
 extension MAMultiColoredPolylineRenderer_Batch on List<MAMultiColoredPolylineRenderer> {
   //region getters
   Future<List<MAMultiPolyline>> get_multiPolyline_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_multiPolyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_multiPolyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAMultiPolyline()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<List<UIColor>>> get_strokeColors_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_strokeColors_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_strokeColors_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => UIColor()..refId = __it__).toList()).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_gradient_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_isGradient_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiColoredPolylineRenderer::get_isGradient_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
@@ -154,7 +154,7 @@ extension MAMultiColoredPolylineRenderer_Batch on List<MAMultiColoredPolylineRen
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiColoredPolylineRenderer::initWithMultiPolyline_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"multiPolyline": multiPolyline[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiColoredPolylineRenderer::initWithMultiPolyline_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"multiPolyline": multiPolyline[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

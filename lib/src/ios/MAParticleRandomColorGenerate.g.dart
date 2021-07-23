@@ -24,7 +24,7 @@ class MAParticleRandomColorGenerate extends NSObject with MAParticleColorGenerat
 
   //region creators
   static Future<MAParticleRandomColorGenerate> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleRandomColorGenerate', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleRandomColorGenerate', {'init': init});
     final object = MAParticleRandomColorGenerate()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAParticleRandomColorGenerate extends NSObject with MAParticleColorGenerat
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleRandomColorGenerate', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleRandomColorGenerate', {'length': length, 'init': init});
   
     final List<MAParticleRandomColorGenerate> typedResult = resultBatch.map((result) => MAParticleRandomColorGenerate()..refId = result).toList();
     return typedResult;
@@ -58,7 +58,7 @@ class MAParticleRandomColorGenerate extends NSObject with MAParticleColorGenerat
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleRandomColorGenerate::initWithBoundaryColorR1_G1_B1_A1_R2_G2_B2_A2', {"r1": r1, "g1": g1, "b1": b1, "a1": a1, "r2": r2, "g2": g2, "b2": b2, "a2": a2, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleRandomColorGenerate::initWithBoundaryColorR1_G1_B1_A1_R2_G2_B2_A2', {"r1": r1, "g1": g1, "b1": b1, "a1": a1, "r2": r2, "g2": g2, "b2": b2, "a2": a2, "__this__": this});
   
   
     // handle native call
@@ -98,7 +98,7 @@ extension MAParticleRandomColorGenerate_Batch on List<MAParticleRandomColorGener
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleRandomColorGenerate::initWithBoundaryColorR1_G1_B1_A1_R2_G2_B2_A2_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"r1": r1[__i__], "g1": g1[__i__], "b1": b1[__i__], "a1": a1[__i__], "r2": r2[__i__], "g2": g2[__i__], "b2": b2[__i__], "a2": a2[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleRandomColorGenerate::initWithBoundaryColorR1_G1_B1_A1_R2_G2_B2_A2_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"r1": r1[__i__], "g1": g1[__i__], "b1": b1[__i__], "a1": a1[__i__], "r2": r2[__i__], "g2": g2[__i__], "b2": b2[__i__], "a2": a2[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

@@ -24,7 +24,7 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
 
   //region creators
   static Future<MAAnimatedAnnotation> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAAnimatedAnnotation', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAAnimatedAnnotation', {'init': init});
     final object = MAAnimatedAnnotation()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAAnimatedAnnotation', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAAnimatedAnnotation', {'length': length, 'init': init});
   
     final List<MAAnimatedAnnotation> typedResult = resultBatch.map((result) => MAAnimatedAnnotation()..refId = result).toList();
     return typedResult;
@@ -43,7 +43,7 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
 
   //region getters
   Future<double> get_movingDirection() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnimatedAnnotation::get_movingDirection", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnimatedAnnotation::get_movingDirection", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -51,7 +51,7 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
 
   //region setters
   Future<void> set_movingDirection(double movingDirection) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::set_movingDirection', <String, dynamic>{'__this__': this, "movingDirection": movingDirection});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::set_movingDirection', <String, dynamic>{'__this__': this, "movingDirection": movingDirection});
   
   
   }
@@ -67,11 +67,11 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::addMoveAnimationWithKeyCoordinates_count_withDuration_withName_completeCallback', {"coordinates": coordinates, "count": count, "duration": duration, "name": name, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::addMoveAnimationWithKeyCoordinates_count_withDuration_withName_completeCallback', {"coordinates": coordinates, "count": count, "duration": duration, "name": name, "__this__": this});
   
   
     // handle native call
-    MethodChannel('void|BOOL#isFinished::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('void|BOOL#isFinished::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -111,11 +111,11 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::addMoveAnimationWithKeyCoordinates_count_withDuration_withName_completeCallback_stepCallback', {"coordinates": coordinates, "count": count, "duration": duration, "name": name, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::addMoveAnimationWithKeyCoordinates_count_withDuration_withName_completeCallback_stepCallback', {"coordinates": coordinates, "count": count, "duration": duration, "name": name, "__this__": this});
   
   
     // handle native call
-    MethodChannel('void|BOOL#isFinished::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('void|BOOL#isFinished::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -137,7 +137,7 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
             throw e;
           }
         });
-    MethodChannel('void|MAAnnotationMoveAnimation*#currentAni::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('void|MAAnnotationMoveAnimation*#currentAni::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -177,7 +177,7 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::allMoveAnimations', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::allMoveAnimations', {"__this__": this});
   
   
     // handle native call
@@ -200,7 +200,7 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::setNeedsStart', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::setNeedsStart', {"__this__": this});
   
   
     // handle native call
@@ -226,7 +226,7 @@ class MAAnimatedAnnotation extends MAPointAnnotation with MAAnimatableAnnotation
 extension MAAnimatedAnnotation_Batch on List<MAAnimatedAnnotation> {
   //region getters
   Future<List<double>> get_movingDirection_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnimatedAnnotation::get_movingDirection_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnimatedAnnotation::get_movingDirection_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
@@ -251,7 +251,7 @@ extension MAAnimatedAnnotation_Batch on List<MAAnimatedAnnotation> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::allMoveAnimations_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::allMoveAnimations_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -270,7 +270,7 @@ extension MAAnimatedAnnotation_Batch on List<MAAnimatedAnnotation> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::setNeedsStart_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnimatedAnnotation::setNeedsStart_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

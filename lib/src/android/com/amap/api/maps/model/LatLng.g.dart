@@ -24,13 +24,13 @@ class com_amap_api_maps_model_LatLng extends java_lang_Object with android_os_Pa
 
   //region creators
   static Future<com_amap_api_maps_model_LatLng> create__double__double(double var1, double var3) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_LatLng__double__double', {"var1": var1, "var3": var3});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_LatLng__double__double', {"var1": var1, "var3": var3});
     final object = com_amap_api_maps_model_LatLng()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_maps_model_LatLng> create__double__double__boolean(double var1, double var3, bool var5) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_LatLng__double__double__boolean', {"var1": var1, "var3": var3, "var5": var5});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_LatLng__double__double__boolean', {"var1": var1, "var3": var3, "var5": var5});
     final object = com_amap_api_maps_model_LatLng()..refId = refId;
     return object;
   }
@@ -39,7 +39,7 @@ class com_amap_api_maps_model_LatLng extends java_lang_Object with android_os_Pa
     if (var1.length != var3.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_LatLng__double__double', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_LatLng__double__double', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__]}]);
   
     final List<com_amap_api_maps_model_LatLng> typedResult = resultBatch.map((result) => com_amap_api_maps_model_LatLng()..refId = result).toList();
     return typedResult;
@@ -49,7 +49,7 @@ class com_amap_api_maps_model_LatLng extends java_lang_Object with android_os_Pa
     if (var1.length != var3.length || var3.length != var5.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_LatLng__double__double__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_LatLng__double__double__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]);
   
     final List<com_amap_api_maps_model_LatLng> typedResult = resultBatch.map((result) => com_amap_api_maps_model_LatLng()..refId = result).toList();
     return typedResult;
@@ -59,12 +59,12 @@ class com_amap_api_maps_model_LatLng extends java_lang_Object with android_os_Pa
 
   //region getters
   Future<double> get_latitude() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.LatLng::get_latitude", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.LatLng::get_latitude", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_longitude() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.LatLng::get_longitude", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.LatLng::get_longitude", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -83,7 +83,7 @@ class com_amap_api_maps_model_LatLng extends java_lang_Object with android_os_Pa
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.LatLng::clone', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.LatLng::clone', {"__this__": this});
   
   
     // handle native call
@@ -109,14 +109,14 @@ class com_amap_api_maps_model_LatLng extends java_lang_Object with android_os_Pa
 extension com_amap_api_maps_model_LatLng_Batch on List<com_amap_api_maps_model_LatLng> {
   //region getters
   Future<List<double>> get_latitude_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.LatLng::get_latitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.LatLng::get_latitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_longitude_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.LatLng::get_longitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.LatLng::get_longitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
@@ -136,7 +136,7 @@ extension com_amap_api_maps_model_LatLng_Batch on List<com_amap_api_maps_model_L
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.LatLng::clone_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.model.LatLng::clone_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

@@ -1,7 +1,7 @@
 import 'package:amap_map_fluttify/amap_map_fluttify.dart';
+import 'package:amap_map_fluttify_example/utils/dimens.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
-
 class CalculateDistanceScreen extends StatefulWidget {
   @override
   CalculateDistanceStateScreen createState() => CalculateDistanceStateScreen();
@@ -22,7 +22,7 @@ class CalculateDistanceStateScreen extends State<CalculateDistanceScreen> {
         title: Text('距离计算'),
       ),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           DecoratedRow(
             itemSpacing: kSpaceNormal,

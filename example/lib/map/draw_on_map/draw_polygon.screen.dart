@@ -2,7 +2,7 @@ import 'package:amap_map_fluttify/amap_map_fluttify.dart';
 import 'package:amap_map_fluttify_example/utils/next_latlng.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
-
+import 'package:amap_map_fluttify_example/utils/dimens.dart';
 class DrawPolygonScreen extends StatefulWidget {
   DrawPolygonScreen();
 

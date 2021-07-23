@@ -4,7 +4,7 @@ import 'package:amap_map_fluttify_example/utils/next_latlng.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:demo_widgets/demo_widgets.dart';
 import 'package:flutter/material.dart';
-
+import 'package:amap_map_fluttify_example/utils/dimens.dart';
 final _networkIcon = NetworkImage(
     'https://w3.hoopchina.com.cn/30/a7/6a/30a76aea75aef69e4ea0e7d3dee552c7001.jpg');
 final _assetsIcon1 = AssetImage('images/test_icon.png');

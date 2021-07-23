@@ -24,7 +24,7 @@ class MAParticleConstantRotationGenerate extends NSObject with MAParticleRotatio
 
   //region creators
   static Future<MAParticleConstantRotationGenerate> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleConstantRotationGenerate', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleConstantRotationGenerate', {'init': init});
     final object = MAParticleConstantRotationGenerate()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAParticleConstantRotationGenerate extends NSObject with MAParticleRotatio
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleConstantRotationGenerate', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleConstantRotationGenerate', {'length': length, 'init': init});
   
     final List<MAParticleConstantRotationGenerate> typedResult = resultBatch.map((result) => MAParticleConstantRotationGenerate()..refId = result).toList();
     return typedResult;
@@ -58,7 +58,7 @@ class MAParticleConstantRotationGenerate extends NSObject with MAParticleRotatio
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleConstantRotationGenerate::initWithRotate', {"rotate": rotate, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleConstantRotationGenerate::initWithRotate', {"rotate": rotate, "__this__": this});
   
   
     // handle native call
@@ -98,7 +98,7 @@ extension MAParticleConstantRotationGenerate_Batch on List<MAParticleConstantRot
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleConstantRotationGenerate::initWithRotate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rotate": rotate[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleConstantRotationGenerate::initWithRotate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rotate": rotate[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

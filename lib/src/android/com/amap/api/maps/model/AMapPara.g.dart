@@ -26,7 +26,7 @@ class com_amap_api_maps_model_AMapPara extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_maps_model_AMapPara> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_AMapPara__', );
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_AMapPara__', );
     final object = com_amap_api_maps_model_AMapPara()..refId = refId;
     return object;
   }
@@ -35,7 +35,7 @@ class com_amap_api_maps_model_AMapPara extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_AMapPara__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_AMapPara__', {'length': length});
   
     final List<com_amap_api_maps_model_AMapPara> typedResult = resultBatch.map((result) => com_amap_api_maps_model_AMapPara()..refId = result).toList();
     return typedResult;

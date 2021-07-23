@@ -24,7 +24,7 @@ class MAOfflineMapViewController extends UIViewController  {
 
   //region creators
   static Future<MAOfflineMapViewController> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAOfflineMapViewController', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAOfflineMapViewController', {'init': init});
     final object = MAOfflineMapViewController()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAOfflineMapViewController extends UIViewController  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAOfflineMapViewController', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAOfflineMapViewController', {'length': length, 'init': init});
   
     final List<MAOfflineMapViewController> typedResult = resultBatch.map((result) => MAOfflineMapViewController()..refId = result).toList();
     return typedResult;
@@ -43,7 +43,7 @@ class MAOfflineMapViewController extends UIViewController  {
 
   //region getters
   Future<MAOfflineMap> get_offlineMap() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAOfflineMapViewController::get_offlineMap", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAOfflineMapViewController::get_offlineMap", {'__this__': this});
     return __result__ == null ? null : (MAOfflineMap()..refId = __result__);
   }
   
@@ -62,7 +62,7 @@ class MAOfflineMapViewController extends UIViewController  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAOfflineMapViewController::sharedInstance', );
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAOfflineMapViewController::sharedInstance', );
   
   
     // handle native call
@@ -88,7 +88,7 @@ class MAOfflineMapViewController extends UIViewController  {
 extension MAOfflineMapViewController_Batch on List<MAOfflineMapViewController> {
   //region getters
   Future<List<MAOfflineMap>> get_offlineMap_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAOfflineMapViewController::get_offlineMap_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAOfflineMapViewController::get_offlineMap_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAOfflineMap()..refId = __result__).toList();
     return typedResult;
@@ -108,7 +108,7 @@ extension MAOfflineMapViewController_Batch on List<MAOfflineMapViewController> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAOfflineMapViewController::sharedInstance_batch', );
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAOfflineMapViewController::sharedInstance_batch', );
   
   
     // convert native result to dart side object

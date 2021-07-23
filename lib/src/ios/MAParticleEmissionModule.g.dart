@@ -24,7 +24,7 @@ class MAParticleEmissionModule extends NSObject  {
 
   //region creators
   static Future<MAParticleEmissionModule> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleEmissionModule', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleEmissionModule', {'init': init});
     final object = MAParticleEmissionModule()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAParticleEmissionModule extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleEmissionModule', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleEmissionModule', {'length': length, 'init': init});
   
     final List<MAParticleEmissionModule> typedResult = resultBatch.map((result) => MAParticleEmissionModule()..refId = result).toList();
     return typedResult;
@@ -58,7 +58,7 @@ class MAParticleEmissionModule extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleEmissionModule::initWithEmissionRate_rateTime', {"rate": rate, "rateTime": rateTime, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleEmissionModule::initWithEmissionRate_rateTime', {"rate": rate, "rateTime": rateTime, "__this__": this});
   
   
     // handle native call
@@ -98,7 +98,7 @@ extension MAParticleEmissionModule_Batch on List<MAParticleEmissionModule> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleEmissionModule::initWithEmissionRate_rateTime_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rate": rate[__i__], "rateTime": rateTime[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleEmissionModule::initWithEmissionRate_rateTime_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"rate": rate[__i__], "rateTime": rateTime[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

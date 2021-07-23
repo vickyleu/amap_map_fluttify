@@ -24,7 +24,7 @@ class MAParticleOverlayRenderer extends MAOverlayRenderer  {
 
   //region creators
   static Future<MAParticleOverlayRenderer> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleOverlayRenderer', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleOverlayRenderer', {'init': init});
     final object = MAParticleOverlayRenderer()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAParticleOverlayRenderer extends MAOverlayRenderer  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleOverlayRenderer', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleOverlayRenderer', {'length': length, 'init': init});
   
     final List<MAParticleOverlayRenderer> typedResult = resultBatch.map((result) => MAParticleOverlayRenderer()..refId = result).toList();
     return typedResult;
@@ -43,7 +43,7 @@ class MAParticleOverlayRenderer extends MAOverlayRenderer  {
 
   //region getters
   Future<MAParticleOverlay> get_particleOverlay() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayRenderer::get_particleOverlay", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayRenderer::get_particleOverlay", {'__this__': this});
     return __result__ == null ? null : (MAParticleOverlay()..refId = __result__);
   }
   
@@ -62,7 +62,7 @@ class MAParticleOverlayRenderer extends MAOverlayRenderer  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayRenderer::initWithParticleOverlay', {"particleOverlay": particleOverlay, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayRenderer::initWithParticleOverlay', {"particleOverlay": particleOverlay, "__this__": this});
   
   
     // handle native call
@@ -88,7 +88,7 @@ class MAParticleOverlayRenderer extends MAOverlayRenderer  {
 extension MAParticleOverlayRenderer_Batch on List<MAParticleOverlayRenderer> {
   //region getters
   Future<List<MAParticleOverlay>> get_particleOverlay_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAParticleOverlayRenderer::get_particleOverlay_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAParticleOverlayRenderer::get_particleOverlay_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAParticleOverlay()..refId = __result__).toList();
     return typedResult;
@@ -108,7 +108,7 @@ extension MAParticleOverlayRenderer_Batch on List<MAParticleOverlayRenderer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayRenderer::initWithParticleOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"particleOverlay": particleOverlay[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayRenderer::initWithParticleOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"particleOverlay": particleOverlay[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

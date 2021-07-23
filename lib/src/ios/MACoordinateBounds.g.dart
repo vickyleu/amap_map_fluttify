@@ -24,7 +24,7 @@ class MACoordinateBounds extends NSObject  {
 
   //region creators
   static Future<MACoordinateBounds> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMACoordinateBounds', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMACoordinateBounds', {'init': init});
     final object = MACoordinateBounds()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MACoordinateBounds extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMACoordinateBounds', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMACoordinateBounds', {'length': length, 'init': init});
   
     final List<MACoordinateBounds> typedResult = resultBatch.map((result) => MACoordinateBounds()..refId = result).toList();
     return typedResult;
@@ -43,12 +43,12 @@ class MACoordinateBounds extends NSObject  {
 
   //region getters
   Future<CLLocationCoordinate2D> get_northEast() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MACoordinateBounds::get_northEast", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MACoordinateBounds::get_northEast", {'__this__': this});
     return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
   Future<CLLocationCoordinate2D> get_southWest() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MACoordinateBounds::get_southWest", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MACoordinateBounds::get_southWest", {'__this__': this});
     return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
@@ -56,13 +56,13 @@ class MACoordinateBounds extends NSObject  {
 
   //region setters
   Future<void> set_northEast(CLLocationCoordinate2D northEast) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateBounds::set_northEast', <String, dynamic>{'__this__': this, "northEast": northEast});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MACoordinateBounds::set_northEast', <String, dynamic>{'__this__': this, "northEast": northEast});
   
   
   }
   
   Future<void> set_southWest(CLLocationCoordinate2D southWest) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MACoordinateBounds::set_southWest', <String, dynamic>{'__this__': this, "southWest": southWest});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MACoordinateBounds::set_southWest', <String, dynamic>{'__this__': this, "southWest": southWest});
   
   
   }
@@ -82,14 +82,14 @@ class MACoordinateBounds extends NSObject  {
 extension MACoordinateBounds_Batch on List<MACoordinateBounds> {
   //region getters
   Future<List<CLLocationCoordinate2D>> get_northEast_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MACoordinateBounds::get_northEast_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MACoordinateBounds::get_northEast_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CLLocationCoordinate2D>> get_southWest_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MACoordinateBounds::get_southWest_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MACoordinateBounds::get_southWest_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
     return typedResult;

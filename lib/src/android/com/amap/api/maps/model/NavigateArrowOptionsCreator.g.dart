@@ -24,7 +24,7 @@ class com_amap_api_maps_model_NavigateArrowOptionsCreator extends java_lang_Obje
 
   //region creators
   static Future<com_amap_api_maps_model_NavigateArrowOptionsCreator> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_NavigateArrowOptionsCreator__', );
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_NavigateArrowOptionsCreator__', );
     final object = com_amap_api_maps_model_NavigateArrowOptionsCreator()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class com_amap_api_maps_model_NavigateArrowOptionsCreator extends java_lang_Obje
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_NavigateArrowOptionsCreator__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_NavigateArrowOptionsCreator__', {'length': length});
   
     final List<com_amap_api_maps_model_NavigateArrowOptionsCreator> typedResult = resultBatch.map((result) => com_amap_api_maps_model_NavigateArrowOptionsCreator()..refId = result).toList();
     return typedResult;

@@ -24,7 +24,7 @@ class com_amap_api_maps_model_VisibleRegion extends java_lang_Object with androi
 
   //region creators
   static Future<com_amap_api_maps_model_VisibleRegion> create__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLngBounds(com_amap_api_maps_model_LatLng var1, com_amap_api_maps_model_LatLng var2, com_amap_api_maps_model_LatLng var3, com_amap_api_maps_model_LatLng var4, com_amap_api_maps_model_LatLngBounds var5) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_VisibleRegion__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLngBounds', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_model_VisibleRegion__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLngBounds', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5});
     final object = com_amap_api_maps_model_VisibleRegion()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class com_amap_api_maps_model_VisibleRegion extends java_lang_Object with androi
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length || var4.length != var5.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_VisibleRegion__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLngBounds', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_model_VisibleRegion__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLng__com_amap_api_maps_model_LatLngBounds', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]);
   
     final List<com_amap_api_maps_model_VisibleRegion> typedResult = resultBatch.map((result) => com_amap_api_maps_model_VisibleRegion()..refId = result).toList();
     return typedResult;
@@ -43,27 +43,27 @@ class com_amap_api_maps_model_VisibleRegion extends java_lang_Object with androi
 
   //region getters
   Future<com_amap_api_maps_model_LatLng> get_nearLeft() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_nearLeft", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_nearLeft", {'__this__': this});
     return __result__ == null ? null : (com_amap_api_maps_model_LatLng()..refId = __result__);
   }
   
   Future<com_amap_api_maps_model_LatLng> get_nearRight() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_nearRight", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_nearRight", {'__this__': this});
     return __result__ == null ? null : (com_amap_api_maps_model_LatLng()..refId = __result__);
   }
   
   Future<com_amap_api_maps_model_LatLng> get_farLeft() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_farLeft", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_farLeft", {'__this__': this});
     return __result__ == null ? null : (com_amap_api_maps_model_LatLng()..refId = __result__);
   }
   
   Future<com_amap_api_maps_model_LatLng> get_farRight() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_farRight", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_farRight", {'__this__': this});
     return __result__ == null ? null : (com_amap_api_maps_model_LatLng()..refId = __result__);
   }
   
   Future<com_amap_api_maps_model_LatLngBounds> get_latLngBounds() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_latLngBounds", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_latLngBounds", {'__this__': this});
     return __result__ == null ? null : (com_amap_api_maps_model_LatLngBounds()..refId = __result__);
   }
   
@@ -86,35 +86,35 @@ class com_amap_api_maps_model_VisibleRegion extends java_lang_Object with androi
 extension com_amap_api_maps_model_VisibleRegion_Batch on List<com_amap_api_maps_model_VisibleRegion> {
   //region getters
   Future<List<com_amap_api_maps_model_LatLng>> get_nearLeft_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_nearLeft_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_nearLeft_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_LatLng()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<com_amap_api_maps_model_LatLng>> get_nearRight_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_nearRight_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_nearRight_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_LatLng()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<com_amap_api_maps_model_LatLng>> get_farLeft_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_farLeft_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_farLeft_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_LatLng()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<com_amap_api_maps_model_LatLng>> get_farRight_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_farRight_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_farRight_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_LatLng()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<com_amap_api_maps_model_LatLngBounds>> get_latLngBounds_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_latLngBounds_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("com.amap.api.maps.model.VisibleRegion::get_latLngBounds_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_maps_model_LatLngBounds()..refId = __result__).toList();
     return typedResult;

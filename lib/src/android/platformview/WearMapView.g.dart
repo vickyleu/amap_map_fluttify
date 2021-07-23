@@ -46,7 +46,7 @@ class _com_amap_api_maps_WearMapView_AndroidState extends State<com_amap_api_map
       Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
     };
 
-    final messageCodec = FluttifyMessageCodec('amap_map_fluttify');
+    final messageCodec = FluttifyMessageCodec(tag: 'amap_map_fluttify');
 
     // hybrid composition version.
     // PlatformViewLink(

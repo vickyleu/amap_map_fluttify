@@ -24,7 +24,7 @@ class MAMultiPointOverlayRenderer extends MAOverlayRenderer  {
 
   //region creators
   static Future<MAMultiPointOverlayRenderer> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAMultiPointOverlayRenderer', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAMultiPointOverlayRenderer', {'init': init});
     final object = MAMultiPointOverlayRenderer()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAMultiPointOverlayRenderer extends MAOverlayRenderer  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAMultiPointOverlayRenderer', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAMultiPointOverlayRenderer', {'length': length, 'init': init});
   
     final List<MAMultiPointOverlayRenderer> typedResult = resultBatch.map((result) => MAMultiPointOverlayRenderer()..refId = result).toList();
     return typedResult;
@@ -43,22 +43,22 @@ class MAMultiPointOverlayRenderer extends MAOverlayRenderer  {
 
   //region getters
   Future<UIImage> get_icon() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_icon", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_icon", {'__this__': this});
     return __result__ == null ? null : (UIImage()..refId = __result__);
   }
   
   Future<CGSize> get_pointSize() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_pointSize", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_pointSize", {'__this__': this});
     return __result__ == null ? null : (CGSize()..refId = __result__);
   }
   
   Future<CGPoint> get_anchor() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_anchor", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_anchor", {'__this__': this});
     return __result__ == null ? null : (CGPoint()..refId = __result__);
   }
   
   Future<MAMultiPointOverlay> get_multiPointOverlay() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_multiPointOverlay", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_multiPointOverlay", {'__this__': this});
     return __result__ == null ? null : (MAMultiPointOverlay()..refId = __result__);
   }
   
@@ -66,9 +66,9 @@ class MAMultiPointOverlayRenderer extends MAOverlayRenderer  {
 
   //region setters
   Future<void> set_delegate(MAMultiPointOverlayRendererDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::set_delegate', <String, dynamic>{'__this__': this, });
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('MAMultiPointOverlayRendererDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('MAMultiPointOverlayRendererDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
       .setMethodCallHandler((methodCall) async {
         try {
           final args = methodCall.arguments as Map;
@@ -93,19 +93,19 @@ class MAMultiPointOverlayRenderer extends MAOverlayRenderer  {
   }
   
   Future<void> set_icon(UIImage icon) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::set_icon', <String, dynamic>{'__this__': this, "icon": icon});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::set_icon', <String, dynamic>{'__this__': this, "icon": icon});
   
   
   }
   
   Future<void> set_pointSize(CGSize pointSize) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::set_pointSize', <String, dynamic>{'__this__': this, "pointSize": pointSize});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::set_pointSize', <String, dynamic>{'__this__': this, "pointSize": pointSize});
   
   
   }
   
   Future<void> set_anchor(CGPoint anchor) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::set_anchor', <String, dynamic>{'__this__': this, "anchor": anchor});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::set_anchor', <String, dynamic>{'__this__': this, "anchor": anchor});
   
   
   }
@@ -121,7 +121,7 @@ class MAMultiPointOverlayRenderer extends MAOverlayRenderer  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::initWithMultiPointOverlay', {"multiPointOverlay": multiPointOverlay, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::initWithMultiPointOverlay', {"multiPointOverlay": multiPointOverlay, "__this__": this});
   
   
     // handle native call
@@ -147,28 +147,28 @@ class MAMultiPointOverlayRenderer extends MAOverlayRenderer  {
 extension MAMultiPointOverlayRenderer_Batch on List<MAMultiPointOverlayRenderer> {
   //region getters
   Future<List<UIImage>> get_icon_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_icon_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_icon_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => UIImage()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGSize>> get_pointSize_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_pointSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_pointSize_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGSize()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<CGPoint>> get_anchor_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_anchor_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_anchor_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => CGPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<MAMultiPointOverlay>> get_multiPointOverlay_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_multiPointOverlay_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAMultiPointOverlayRenderer::get_multiPointOverlay_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MAMultiPointOverlay()..refId = __result__).toList();
     return typedResult;
@@ -205,7 +205,7 @@ extension MAMultiPointOverlayRenderer_Batch on List<MAMultiPointOverlayRenderer>
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::initWithMultiPointOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"multiPointOverlay": multiPointOverlay[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAMultiPointOverlayRenderer::initWithMultiPointOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"multiPointOverlay": multiPointOverlay[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

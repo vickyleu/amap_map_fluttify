@@ -24,7 +24,7 @@ class MATileOverlayRenderer extends MAOverlayRenderer  {
 
   //region creators
   static Future<MATileOverlayRenderer> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMATileOverlayRenderer', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMATileOverlayRenderer', {'init': init});
     final object = MATileOverlayRenderer()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MATileOverlayRenderer extends MAOverlayRenderer  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMATileOverlayRenderer', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMATileOverlayRenderer', {'length': length, 'init': init});
   
     final List<MATileOverlayRenderer> typedResult = resultBatch.map((result) => MATileOverlayRenderer()..refId = result).toList();
     return typedResult;
@@ -43,7 +43,7 @@ class MATileOverlayRenderer extends MAOverlayRenderer  {
 
   //region getters
   Future<MATileOverlay> get_tileOverlay() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MATileOverlayRenderer::get_tileOverlay", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MATileOverlayRenderer::get_tileOverlay", {'__this__': this});
     return __result__ == null ? null : (MATileOverlay()..refId = __result__);
   }
   
@@ -62,7 +62,7 @@ class MATileOverlayRenderer extends MAOverlayRenderer  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MATileOverlayRenderer::initWithTileOverlay', {"tileOverlay": tileOverlay, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MATileOverlayRenderer::initWithTileOverlay', {"tileOverlay": tileOverlay, "__this__": this});
   
   
     // handle native call
@@ -85,7 +85,7 @@ class MATileOverlayRenderer extends MAOverlayRenderer  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MATileOverlayRenderer::reloadData', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MATileOverlayRenderer::reloadData', {"__this__": this});
   
   
     // handle native call
@@ -111,7 +111,7 @@ class MATileOverlayRenderer extends MAOverlayRenderer  {
 extension MATileOverlayRenderer_Batch on List<MATileOverlayRenderer> {
   //region getters
   Future<List<MATileOverlay>> get_tileOverlay_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MATileOverlayRenderer::get_tileOverlay_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MATileOverlayRenderer::get_tileOverlay_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => MATileOverlay()..refId = __result__).toList();
     return typedResult;
@@ -131,7 +131,7 @@ extension MATileOverlayRenderer_Batch on List<MATileOverlayRenderer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MATileOverlayRenderer::initWithTileOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"tileOverlay": tileOverlay[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MATileOverlayRenderer::initWithTileOverlay_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"tileOverlay": tileOverlay[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -150,7 +150,7 @@ extension MATileOverlayRenderer_Batch on List<MATileOverlayRenderer> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MATileOverlayRenderer::reloadData_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MATileOverlayRenderer::reloadData_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

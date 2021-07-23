@@ -34,7 +34,7 @@ mixin MAParticleSizeGenerate on NSObject {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeX', {"timeFrame": timeFrame, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeX', {"timeFrame": timeFrame, "__this__": this});
   
   
     // handle native call
@@ -57,7 +57,7 @@ mixin MAParticleSizeGenerate on NSObject {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeY', {"timeFrame": timeFrame, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeY', {"timeFrame": timeFrame, "__this__": this});
   
   
     // handle native call
@@ -80,7 +80,7 @@ mixin MAParticleSizeGenerate on NSObject {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeZ', {"timeFrame": timeFrame, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeZ', {"timeFrame": timeFrame, "__this__": this});
   
   
     // handle native call
@@ -106,7 +106,7 @@ extension MAParticleSizeGenerate_Batch on List<MAParticleSizeGenerate> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeX_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"timeFrame": timeFrame[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeX_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"timeFrame": timeFrame[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -125,7 +125,7 @@ extension MAParticleSizeGenerate_Batch on List<MAParticleSizeGenerate> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeY_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"timeFrame": timeFrame[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeY_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"timeFrame": timeFrame[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -144,7 +144,7 @@ extension MAParticleSizeGenerate_Batch on List<MAParticleSizeGenerate> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeZ_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"timeFrame": timeFrame[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleSizeGenerate::getSizeZ_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"timeFrame": timeFrame[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

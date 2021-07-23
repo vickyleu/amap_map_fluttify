@@ -36,7 +36,7 @@ class com_amap_api_maps_offlinemap_OfflineMapStatus extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_maps_offlinemap_OfflineMapStatus> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_offlinemap_OfflineMapStatus__', );
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_offlinemap_OfflineMapStatus__', );
     final object = com_amap_api_maps_offlinemap_OfflineMapStatus()..refId = refId;
     return object;
   }
@@ -45,7 +45,7 @@ class com_amap_api_maps_offlinemap_OfflineMapStatus extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_offlinemap_OfflineMapStatus__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_offlinemap_OfflineMapStatus__', {'length': length});
   
     final List<com_amap_api_maps_offlinemap_OfflineMapStatus> typedResult = resultBatch.map((result) => com_amap_api_maps_offlinemap_OfflineMapStatus()..refId = result).toList();
     return typedResult;

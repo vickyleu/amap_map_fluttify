@@ -24,7 +24,7 @@ class MAParticleOverlayOptionsFactory extends NSObject  {
 
   //region creators
   static Future<MAParticleOverlayOptionsFactory> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleOverlayOptionsFactory', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAParticleOverlayOptionsFactory', {'init': init});
     final object = MAParticleOverlayOptionsFactory()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAParticleOverlayOptionsFactory extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleOverlayOptionsFactory', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAParticleOverlayOptionsFactory', {'length': length, 'init': init});
   
     final List<MAParticleOverlayOptionsFactory> typedResult = resultBatch.map((result) => MAParticleOverlayOptionsFactory()..refId = result).toList();
     return typedResult;
@@ -58,7 +58,7 @@ class MAParticleOverlayOptionsFactory extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptionsFactory::particleOverlayOptionsWithType', {"particleType": particleType.toValue()});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptionsFactory::particleOverlayOptionsWithType', {"particleType": particleType.toValue()});
   
   
     // handle native call
@@ -98,7 +98,7 @@ extension MAParticleOverlayOptionsFactory_Batch on List<MAParticleOverlayOptions
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptionsFactory::particleOverlayOptionsWithType_batch', [for (int __i__ = 0; __i__ < particleType.length; __i__++) {"particleType": particleType[__i__].toValue()}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAParticleOverlayOptionsFactory::particleOverlayOptionsWithType_batch', [for (int __i__ = 0; __i__ < particleType.length; __i__++) {"particleType": particleType[__i__].toValue()}]);
   
   
     // convert native result to dart side object

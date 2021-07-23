@@ -24,7 +24,7 @@ class MAOfflineProvince extends MAOfflineItem  {
 
   //region creators
   static Future<MAOfflineProvince> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAOfflineProvince', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAOfflineProvince', {'init': init});
     final object = MAOfflineProvince()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAOfflineProvince extends MAOfflineItem  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAOfflineProvince', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAOfflineProvince', {'length': length, 'init': init});
   
     final List<MAOfflineProvince> typedResult = resultBatch.map((result) => MAOfflineProvince()..refId = result).toList();
     return typedResult;
@@ -43,7 +43,7 @@ class MAOfflineProvince extends MAOfflineItem  {
 
   //region getters
   Future<List<dynamic>> get_cities() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAOfflineProvince::get_cities", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAOfflineProvince::get_cities", {'__this__': this});
     return __result__ == null ? null : ((__result__ as List).cast<dynamic>());
   }
   
@@ -66,7 +66,7 @@ class MAOfflineProvince extends MAOfflineItem  {
 extension MAOfflineProvince_Batch on List<MAOfflineProvince> {
   //region getters
   Future<List<List<dynamic>>> get_cities_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAOfflineProvince::get_cities_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAOfflineProvince::get_cities_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<dynamic>()).toList();
     return typedResult;

@@ -24,7 +24,7 @@ class MAOfflineItemNationWide extends MAOfflineCity  {
 
   //region creators
   static Future<MAOfflineItemNationWide> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAOfflineItemNationWide', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAOfflineItemNationWide', {'init': init});
     final object = MAOfflineItemNationWide()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAOfflineItemNationWide extends MAOfflineCity  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAOfflineItemNationWide', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAOfflineItemNationWide', {'length': length, 'init': init});
   
     final List<MAOfflineItemNationWide> typedResult = resultBatch.map((result) => MAOfflineItemNationWide()..refId = result).toList();
     return typedResult;

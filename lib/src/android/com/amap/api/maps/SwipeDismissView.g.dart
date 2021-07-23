@@ -24,7 +24,7 @@ class com_amap_api_maps_SwipeDismissView extends android_widget_RelativeLayout  
 
   //region creators
   static Future<com_amap_api_maps_SwipeDismissView> create__android_content_Context__android_view_View(android_content_Context var1, android_view_View var2) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_SwipeDismissView__android_content_Context__android_view_View', {"var1": var1, "var2": var2});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_maps_SwipeDismissView__android_content_Context__android_view_View', {"var1": var1, "var2": var2});
     final object = com_amap_api_maps_SwipeDismissView()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class com_amap_api_maps_SwipeDismissView extends android_widget_RelativeLayout  
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_SwipeDismissView__android_content_Context__android_view_View', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_maps_SwipeDismissView__android_content_Context__android_view_View', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
     final List<com_amap_api_maps_SwipeDismissView> typedResult = resultBatch.map((result) => com_amap_api_maps_SwipeDismissView()..refId = result).toList();
     return typedResult;
@@ -58,11 +58,11 @@ class com_amap_api_maps_SwipeDismissView extends android_widget_RelativeLayout  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('com.amap.api.maps.SwipeDismissView::setCallback', {"__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('com.amap.api.maps.SwipeDismissView::setCallback', {"__this__": this});
   
   
     // handle native call
-    MethodChannel('com.amap.api.maps.SwipeDismissView::setCallback::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify')))
+    MethodChannel('com.amap.api.maps.SwipeDismissView::setCallback::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;

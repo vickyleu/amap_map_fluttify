@@ -24,7 +24,7 @@ class MAGeodesicPolyline extends MAPolyline with MAOverlay, MAAnnotation {
 
   //region creators
   static Future<MAGeodesicPolyline> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAGeodesicPolyline', {'init': init});
+    final refId = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::createMAGeodesicPolyline', {'init': init});
     final object = MAGeodesicPolyline()..refId = refId;
     return object;
   }
@@ -33,7 +33,7 @@ class MAGeodesicPolyline extends MAPolyline with MAOverlay, MAAnnotation {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAGeodesicPolyline', {'length': length, 'init': init});
+    final List resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('ObjectFactory::create_batchMAGeodesicPolyline', {'length': length, 'init': init});
   
     final List<MAGeodesicPolyline> typedResult = resultBatch.map((result) => MAGeodesicPolyline()..refId = result).toList();
     return typedResult;

@@ -23,29 +23,29 @@ mixin MAAnnotation on NSObject {
   final String tag__ = 'amap_map_fluttify';
 
   Future<CLLocationCoordinate2D> get_coordinate() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotation::get_coordinate", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotation::get_coordinate", {'__this__': this});
     return __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__);
   }
   
   Future<String> get_title() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotation::get_title", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotation::get_title", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_subtitle() async {
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod("MAAnnotation::get_subtitle", {'__this__': this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod("MAAnnotation::get_subtitle", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
 
   Future<void> set_title(String title) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotation::set_title', <String, dynamic>{'__this__': this, "title": title});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotation::set_title', <String, dynamic>{'__this__': this, "title": title});
   
   
   }
   
   Future<void> set_subtitle(String subtitle) async {
-    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotation::set_subtitle', <String, dynamic>{'__this__': this, "subtitle": subtitle});
+    await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotation::set_subtitle', <String, dynamic>{'__this__': this, "subtitle": subtitle});
   
   
   }
@@ -59,7 +59,7 @@ mixin MAAnnotation on NSObject {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotation::setCoordinate', {"newCoordinate": newCoordinate, "__this__": this});
+    final __result__ = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotation::setCoordinate', {"newCoordinate": newCoordinate, "__this__": this});
   
   
     // handle native call
@@ -85,7 +85,7 @@ extension MAAnnotation_Batch on List<MAAnnotation> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_map_fluttify'))).invokeMethod('MAAnnotation::setCoordinate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"newCoordinate": newCoordinate[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_map_fluttify', StandardMethodCodec(FluttifyMessageCodec(tag: 'amap_map_fluttify'))).invokeMethod('MAAnnotation::setCoordinate_batch', [for (int __i__ = 0; __i__ < length; __i__++) {"newCoordinate": newCoordinate[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

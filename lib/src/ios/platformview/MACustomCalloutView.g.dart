@@ -46,7 +46,7 @@ class _MACustomCalloutView_iOSState extends State<MACustomCalloutView_iOS> {
       Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
     };
 
-    final messageCodec = FluttifyMessageCodec('amap_map_fluttify');
+    final messageCodec = FluttifyMessageCodec(tag: 'amap_map_fluttify');
     return UiKitView(
       viewType: 'me.yohom/MACustomCalloutView',
       gestureRecognizers: gestureRecognizers,
